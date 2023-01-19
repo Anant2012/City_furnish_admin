@@ -1,0 +1,147 @@
+input:focus {
+    outline: none;
+}
+
+.pass {
+    display: flex;
+    margin: 40px;
+}
+
+.input {
+    position: absolute;
+    left: 30%;
+}
+
+
+.spans {
+    color: red;
+}
+
+.checked {
+    margin-left: 230px;
+}
+
+.forms {
+    margin-left: 40px;
+}
+
+.buton {
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Radio {
+    margin-left: 250px;
+}
+
+.sitemap {
+    width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .pass {
+        display: block;
+    }
+
+    .sitemap {
+        width: auto;
+    }
+
+    .spans {
+        margin-right: 0;
+    }
+
+    .checked {
+        margin-left: 0px;
+    }
+
+    .buton {
+        margin-left: 35%;
+    }
+
+    .Radio {
+        margin-left: 50px;
+    }
+
+    .input {
+        position: inherit;
+    }
+}
+
+
+/* Setting Css */
+.main {
+    font-weight: normal;
+    position: absolute;
+    right: 8%;
+}
+
+.spanss:hover {
+    color: blue;
+}
+
+.all {
+    margin: 3%;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        position: inherit;
+        display: flex;
+        margin-left: 0px;
+    }
+}
+
+/* Admin Setting */
+
+.input5 {
+    position: absolute;
+    left: 35%;
+    border: 1px solid lightgray;
+    width: 500px;
+}
+
+.talk {
+    position: absolute;
+    left: 35%;
+    margin-bottom: 10px;
+}
+
+.butoon {
+    margin-bottom: 20px;
+    outline: none;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    padding: 6px;
+    margin-left: 90%;
+}
+
+@media only screen and (max-width: 800px) {
+    .Settings {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .input5 {
+        position: inherit;
+        width: auto;
+    }
+
+    .butoon {
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    .talk {
+        display: none;
+        margin-left: 0px;
+        /* width:auto; */
+    }
+}

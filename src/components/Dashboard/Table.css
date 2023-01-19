@@ -1,0 +1,17 @@
+.tab{
+    padding-left: 30px;
+}
+.rwd-table{
+    width: 100%;
+    background-color: white;
+}
+td {
+    padding: 11px 3px;
+    border: 1px solid lightgray;
+  }
+  .ip{
+    text-align: left;
+  }
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }

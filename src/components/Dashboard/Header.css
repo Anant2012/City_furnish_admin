@@ -1,0 +1,41 @@
+.iconsCss {
+  font-size: 60px;
+  padding: 7px;
+  margin: 12px;
+  border-radius: 5px;
+  color: brown;
+}
+.css {
+  display: flex;
+  color: rgb(67, 166, 198);
+  flex-direction: column;
+}
+.products {
+  display: flex;
+  margin: 1%;
+  flex-direction: column;
+  border: 1px solid brown;
+  padding:2% 2% 0.5% 2%;
+  border-radius: 5px;
+}
+.ALLprod {
+  font-weight: bold;
+  display: flex;
+  margin-top: 2%;
+  flex-direction: row;
+  margin-left:210px;
+  flex-wrap: wrap;
+}
+p {
+  text-align: center;
+  color: #c16a1c;
+}
+@media screen and (max-width:500px) {
+  .ALLprod{
+    display: inline-block;
+    margin-left: 0;
+  }
+  .products{
+    margin-top: 5%;
+  }
+}

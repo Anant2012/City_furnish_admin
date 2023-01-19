@@ -1,0 +1,25 @@
+.table thead th {
+  border-color: black;
+}
+.table {
+  background-color: white;
+}
+.table tbody th,
+.table tbody td,
+.table tbody tr {
+  border-width: 2px;
+}
+.table img {
+  height: 50px;
+  width: 50px;
+  border-radius: 40%;
+}
+.table svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+caption {
+  width: max-content;
+  color: dimgrey;
+  font-weight: bolder;
+}
