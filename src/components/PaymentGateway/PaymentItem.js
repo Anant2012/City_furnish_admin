@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { Modal, Box, Typography } from "@mui/material";
+//import { Modal, Box, Typography } from "@mui/material";
 import "./Payment.css";
 
 const PaymentItem = ({ item }) => {
@@ -15,7 +15,7 @@ const PaymentItem = ({ item }) => {
   };
   return (
     <>
-      <tr>
+      {/* <tr>
         <td>
           <input type="checkbox"></input>
         </td>
@@ -79,7 +79,7 @@ const PaymentItem = ({ item }) => {
             <button onClick={handleClose}>No</button>
           </Typography>
         </Box>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

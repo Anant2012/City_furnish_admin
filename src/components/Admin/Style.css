@@ -1,147 +1,147 @@
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .pass {
-    display: flex;
-    margin: 40px;
+  display: flex;
+  margin: 40px;
 }
 
 .input {
-    position: absolute;
-    left: 30%;
+  position: absolute;
+  left: 30%;
+}
+.input label {
+  margin: 0 25px 0 5px;
 }
 
-
 .spans {
-    color: red;
+  color: red;
 }
 
 .checked {
-    margin-left: 230px;
+  margin-left: 230px;
 }
 
 .forms {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .buton {
-    margin-left: 20%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Radio {
-    margin-left: 250px;
+  margin-left: 250px;
 }
 
 .sitemap {
-    width: 50%;
+  width: 50%;
 }
 
 @media screen and (max-width: 700px) {
-    .pass {
-        display: block;
-    }
+  .pass {
+    display: block;
+  }
 
-    .sitemap {
-        width: auto;
-    }
+  .sitemap {
+    width: auto;
+  }
 
-    .spans {
-        margin-right: 0;
-    }
+  .spans {
+    margin-right: 0;
+  }
 
-    .checked {
-        margin-left: 0px;
-    }
+  .checked {
+    margin-left: 0px;
+  }
 
-    .buton {
-        margin-left: 35%;
-    }
+  .buton {
+    margin-left: 35%;
+  }
 
-    .Radio {
-        margin-left: 50px;
-    }
+  .Radio {
+    margin-left: 50px;
+  }
 
-    .input {
-        position: inherit;
-    }
+  .input {
+    position: inherit;
+  }
 }
-
 
 /* Setting Css */
 .main {
-    font-weight: normal;
-    position: absolute;
-    right: 8%;
+  font-weight: normal;
+  position: absolute;
+  right: 8%;
 }
 
 .spanss:hover {
-    color: blue;
+  color: blue;
 }
 
 .all {
-    margin: 3%;
-    border-radius: 7px;
-    border: 1px solid gray;
+  margin: 3%;
+  border-radius: 7px;
+  border: 1px solid gray;
 }
 
 @media only screen and (max-width: 600px) {
-    .main {
-        position: inherit;
-        display: flex;
-        margin-left: 0px;
-    }
+  .main {
+    position: inherit;
+    display: flex;
+    margin-left: 0px;
+  }
 }
 
 /* Admin Setting */
 
 .input5 {
-    position: absolute;
-    left: 35%;
-    border: 1px solid lightgray;
-    width: 500px;
+  position: absolute;
+  left: 35%;
+  border: 1px solid lightgray;
+  width: 500px;
 }
 
 .talk {
-    position: absolute;
-    left: 35%;
-    margin-bottom: 10px;
+  position: absolute;
+  left: 35%;
+  margin-bottom: 10px;
 }
 
 .butoon {
-    margin-bottom: 20px;
-    outline: none;
-    background-color: blue;
-    color: white;
-    border: 1px solid white;
-    padding: 6px;
-    margin-left: 90%;
+  margin-bottom: 20px;
+  outline: none;
+  background-color: blue;
+  color: white;
+  border: 1px solid white;
+  padding: 6px;
+  margin-left: 90%;
 }
 
 @media only screen and (max-width: 800px) {
-    .Settings {
-        display: flex;
-        flex-direction: column;
+  .Settings {
+    display: flex;
+    flex-direction: column;
+  }
 
-    }
+  .input5 {
+    position: inherit;
+    width: auto;
+  }
 
-    .input5 {
-        position: inherit;
-        width: auto;
-    }
-
-    .butoon {
-        margin-top: 40px;
-        margin-left: 150px;
-    }
+  .butoon {
+    margin-top: 40px;
+    margin-left: 150px;
+  }
 }
 
-@media screen and (max-width:1120px) {
-    .talk {
-        display: none;
-        margin-left: 0px;
-        /* width:auto; */
-    }
+@media screen and (max-width: 1120px) {
+  .talk {
+    display: none;
+    margin-left: 0px;
+    /* width:auto; */
+  }
 }

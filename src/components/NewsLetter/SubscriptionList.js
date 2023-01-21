@@ -10,13 +10,11 @@ const SubscriptionList = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
-    { name: "Email Address", selector: (row) => row.name, sortable: true },
     { name: "Email Address", selector: (row) => row.name, sortable: true },
     {
       name: "Status",

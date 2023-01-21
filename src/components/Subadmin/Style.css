@@ -1,0 +1,14 @@
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+}
+.checkboxes div {
+  margin-right: 20px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+.checkboxes-container {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}

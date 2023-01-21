@@ -13,30 +13,44 @@ const AddEmailTemplate = () => {
           padding: "10px",
         }}
       >
-        ☰ <span style={{ marginLeft: "10px" }}>CHANGE PASSWORD</span>
+        ☰ <span style={{ marginLeft: "10px" }}>ADD EMAIL TEMPLATE</span>
       </div>
       <div className="pass">
         <div style={{ marginBottom: "1%" }}>
-          CURRENT PASSWORD <span className="spans">*</span>
+          TEMPLATE NAME <span className="spans">*</span>
         </div>
         <div>
-          <input type="password" required className="input"></input>
-        </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          NEW PASSWORD <span className="spans">*</span>
-        </div>
-        <div>
-          <input type="password" required className="input"></input>
+          <input type="text" required className="input"></input>
         </div>
       </div>
       <div className="pass">
         <div style={{ marginBottom: "1%" }}>
-          RETYPE A PASSWORD <span className="spans">*</span>
+          EMAIL SUBJECT <span className="spans">*</span>
         </div>
         <div>
-          <input type="password" required className="input"></input>
+          <input type="text" required className="input"></input>
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          SENDER NAME <span className="spans">*</span>
+        </div>
+        <div>
+          <input type="text" required className="input"></input>
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          SENDER EMAIL ADDRESS <span className="spans">*</span>
+        </div>
+        <div>
+          <input type="text" required className="input"></input>
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>EMAIL DESCRIPTION</div>
+        <div>
+          <input type="text" className="input"></input>
         </div>
       </div>
       <div className="buton">
@@ -48,7 +62,7 @@ const AddEmailTemplate = () => {
             padding: "6px",
           }}
         >
-          CHANGE
+          SUBMIT
         </button>
       </div>
     </div>

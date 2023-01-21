@@ -1,7 +1,7 @@
 import { BiEdit } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Modal, Box, Typography } from "@mui/material";
+//import { Modal, Box, Typography } from "@mui/material";
 
 const Page = ({ item }) => {
   const [published, setPublished] = useState(item.status === "published");
@@ -27,7 +27,7 @@ const Page = ({ item }) => {
   };
   return (
     <>
-      <tr>
+      {/* <tr>
         <td>
           <input type="checkbox" />
         </td>
@@ -110,7 +110,7 @@ const Page = ({ item }) => {
             <button onClick={handleClose}>No</button>
           </Typography>
         </Box>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

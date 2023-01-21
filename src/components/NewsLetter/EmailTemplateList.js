@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { RiDeleteBin6Fill } from "react-icons/ri";
 import Table from "../Common/Table/Table";
 import { MdDelete } from "react-icons/md";
 import "./Style.css";
@@ -11,7 +10,6 @@ const EmailTemplateList = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );

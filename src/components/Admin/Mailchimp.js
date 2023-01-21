@@ -29,7 +29,7 @@ function Mailchimp() {
       </div>
       <div className="pass">
         <div style={{ marginBottom: "1%" }}>STATUS</div>
-        <div className="checked">
+        <div className="input">
         <span className="forms">
           <input className="form-check-input" type="radio" />
           Yes</span>
