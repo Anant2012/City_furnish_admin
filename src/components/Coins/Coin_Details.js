@@ -1,62 +1,76 @@
 import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import "./prod.css";
+import { FaUserEdit } from "react-icons/fa";
+import { BsPlusLg } from "react-icons/bs";
+import { FcSearch } from "react-icons/fc";
+// import "./Style.css";
 
-const Prod_Buffer = () => {
+const Coin_Details = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-
+  const handleOpen = () => {
+    // to do
+  };
   const onSearch = (val) => {
+    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
-    { name: "Product Name", selector: (row) => row.name, sortable: true },
+    { name: "USER Id", selector: (row) => row.population, sortable: true },
+    { name: "USER Name ", selector: (row) => row.name, sortable: true },
     {
-      name: "Image ",
-      selector: (row) => <img src={row.flag} style={{ width: "40px" }} />,
+      name: "USER Email",
+      selector: (row) => row.name,
       sortable: true,
     },
     {
-      name: "Banglore Buffer",
+      name: "Coin Balance",
       selector: (row) => row.population,
       sortable: true,
     },
     {
-      name: "Delhi Buffer",
+      name: "Last Wallet Updated Date",
       selector: (row) => row.population,
       sortable: true,
     },
     {
-      name: "Ghaziabad/Noida Buffer",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Gurgaon Buffer",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Hyderabad  Buffer",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Mumbai  Buffer",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Pune Buffer",
+      name: "Wallet Created Date",
       selector: (row) => row.population,
       sortable: true,
     },
 
     {
-      name: "Status",
-      selector: (row) => <button className="btn btn-success">Publish</button>,
+      name: "Action",
+      selector: (row) => (
+        <div>
+          <FaUserEdit
+            style={{
+              width: "25px",
+              height: "24px",
+              color: "gray",
+              //   marginLeft: "10px",
+            }}
+          />
+          <BsPlusLg
+            style={{
+              width: "18px",
+              height: "24px",
+              color: "green",
+              //   marginLeft: "10px",
+            }}
+          />
+          <FcSearch
+            style={{
+              width: "25px",
+              height: "24px",
+              color: "gray",
+              //   marginLeft: "10px",
+            }}
+          />
+        </div>
+      ),
       sortable: true,
     },
     // {
@@ -108,9 +122,9 @@ const Prod_Buffer = () => {
         columns={columns}
         data={filteredData}
         onSearch={onSearch}
-        title="PRODUCT BUFFER QUANTITY"
+        title="City Furnish Coins"
       />
     </div>
   );
 };
-export default Prod_Buffer;
+export default Coin_Details;

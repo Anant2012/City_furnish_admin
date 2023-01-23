@@ -1,46 +1,56 @@
-import { TfiViewList } from "react-icons/tfi";
 const UpdateBanner = () => {
-  const handleSubmit = () => {
-    // To Do
-  };
   return (
-    <div class="container-fluid">
-      <div class="w-auto mt-3 ml-3">
-        <table class="table">
-          <thead>
-            <caption>
-              <TfiViewList /> ADD BANNER
-            </caption>
-          </thead>
-          <tbody class="table-group-divider">
-            <tr>
-              <td>BANNER IMAGE</td>
-              <td>
-                <input type="file" accept="image/*" required />
-              </td>
-            </tr>
-            <tr>
-              <td>CURRENT IMAGE</td>
-              <td>
-                <img src="https://cdn1.smartprix.com/rx-iGNlyOFEo-w1200-h1200/GNlyOFEo.jpg" alt="Loading.." />
-              </td>
-            </tr>
-            <tr>
-              <td>BANNER TEXT</td>
-              <td>
-                <input type="text" required />
-              </td>
-            </tr>
-            <tr>
-              <td class="border-none"></td>
-              <td class="border-none">
-                <button onClick={handleSubmit}>Submit</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div
+      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
+    >
+      <div
+        style={{
+          fontWeight: "bold",
+          backgroundColor: "lightgray",
+          border: "1px solid lightgray",
+          padding: "10px",
+        }}
+      >
+        ☰ <span style={{ marginLeft: "10px" }}>EDIT BANNER</span>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>BANNER IMAGE</div>
+        <div className="input">
+          <input type="file" accept="image/*" required />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>CURRENT IMAGE</div>
+        <div className="input">
+          <img
+            src="https://www.reliancedigital.in/medias/One-Plus-Nord2T-Mobile-Phones-492850715-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNTU0NXxpbWFnZS9qcGVnfGltYWdlcy9oNDUvaDBmLzk4NzQ2NDk2NDUwODYuanBnfDJkMzZiZTNmN2JhNjNiYjk3YzE1YzcyYmNlYzk3ZDMzNzU4OWEzNjI3YTkzNTRmMjgxOGE5OTNiYzBhOTJmYzc"
+            alt=""
+            style={{ height: "50px", width: "50px", borderRadius: "20%" }}
+          />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          BANNER TEXT <span className="spans">*</span>
+        </div>
+        <div>
+          <input type="text" className="input"></input>
+        </div>
+      </div>
+      <div className="buton">
+        <button
+          style={{
+            color: "white",
+            backgroundColor: "#1876ba",
+            border: "none",
+            padding: "6px",
+          }}
+        >
+          SUBMIT
+        </button>
       </div>
     </div>
   );
 };
+
 export default UpdateBanner;

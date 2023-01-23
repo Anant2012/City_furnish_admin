@@ -1,73 +1,76 @@
-import { TfiViewList } from "react-icons/tfi";
-import "./AddSubPage.css";
 const AddSubPage = ({ isMainPage = false }) => {
-  const handleSubmit = () => {
-    // to do
-  };
   return (
-    <div class="container-fluid">
-      <div class="w-auto mt-3 ml-3">
-        <table class="table">
-          <thead>
-            <caption>
-              <TfiViewList /> ADD NEW {isMainPage ? "MAIN" : "SUB"} PAGE
-            </caption>
-          </thead>
-          <tbody class="table-group-divider">
-            {!isMainPage && (
-              <tr>
-                <td>SELECT MAIN PAGE</td>
-                <td>
-                  <select name="page" id="page">
-                    <option value="friends_and_partner">
-                      Friends And Partner
-                    </option>
-                    <option value="rental_agreement">Rental Agreement</option>
-                  </select>
-                </td>
-              </tr>
-            )}
-            <tr>
-              <td>PAGE NAME</td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <td>PAGE TITLE</td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <td>DESCRIPTION</td>
-              <td>
-                <input type="text" required />
-              </td>
-            </tr>
-            <tr>
-              <td>HIDDEN PAGE</td>
-              <td>
-                <div class="can-toggle">
-                  <input id="a" type="checkbox" />
-                  <label for="a">
-                    <div
-                      class="can-toggle__switch"
-                      data-checked="Yes"
-                      data-unchecked="No"
-                    ></div>
-                  </label>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="border-none"></td>
-              <td class="border-none">
-                <button onClick={handleSubmit}>Submit</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div
+      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
+    >
+      <div
+        style={{
+          fontWeight: "bold",
+          backgroundColor: "lightgray",
+          border: "1px solid lightgray",
+          padding: "10px",
+        }}
+      >
+        ☰{" "}
+        <span style={{ marginLeft: "10px" }}>
+          ADD NEW {isMainPage ? "MAIN" : "SUB"} PAGE
+        </span>
+      </div>
+      {!isMainPage && (
+        <div className="pass">
+          <div style={{ marginBottom: "1%" }}>
+            SELECT MAIN PAGE<span className="spans">*</span>
+          </div>
+          <div className="input">
+            <select>
+              <option>Friends and Partner</option>
+              <option>Rental agreement</option>
+            </select>
+          </div>
+        </div>
+      )}
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          PAGE NAME<span className="spans">*</span>
+        </div>
+        <div className="input">
+          <input type="text" required />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>PAGE TITLE</div>
+        <div className="input">
+          <input type="text" required />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>DESCRIPTION</div>
+        <div className="input">
+          <textarea rows="2" cols="40" />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          HIDDEN PAGE <span className="spans">*</span>
+        </div>
+        <div className="input">
+          <input type="radio" name="hidden" id="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="hidden" id="no" />
+          <label for="no">No</label>
+        </div>
+      </div>
+      <div className="buton">
+        <button
+          style={{
+            color: "white",
+            backgroundColor: "#1876ba",
+            border: "none",
+            padding: "6px",
+          }}
+        >
+          SUBMIT
+        </button>
       </div>
     </div>
   );

@@ -1,64 +1,61 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import "./prod.css";
+// import { AiOutlinePlus } from "react-icons/ai";
+// import { BsCheck } from "react-icons/bs";
+// import { FaUserEdit } from "react-icons/fa";
 
-const Prod_Buffer = () => {
+const Default = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-
+  const handleOpen = () => {
+    // to do
+  };
   const onSearch = (val) => {
+    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
-    { name: "Product Name", selector: (row) => row.name, sortable: true },
     {
-      name: "Image ",
-      selector: (row) => <img src={row.flag} style={{ width: "40px" }} />,
+      name: "Order Id",
+      selector: (row) => row.population,
       sortable: true,
     },
+    { name: "User Email", selector: (row) => row.name, sortable: true },
+    { name: "Phone No", selector: (row) => row.population, sortable: true },
+
     {
-      name: "Banglore Buffer",
+      name: "Order Date",
       selector: (row) => row.population,
       sortable: true,
     },
     {
-      name: "Delhi Buffer",
+      name: "Transaction ID",
       selector: (row) => row.population,
       sortable: true,
     },
     {
-      name: "Ghaziabad/Noida Buffer",
+      name: "Total",
       selector: (row) => row.population,
       sortable: true,
     },
     {
-      name: "Gurgaon Buffer",
-      selector: (row) => row.population,
+      name: "Status",
+      selector: (row) => row.name,
       sortable: true,
     },
     {
-      name: "Hyderabad  Buffer",
-      selector: (row) => row.population,
+      name: "Last Updated ON",
+      selector: (row) => <p style={{ marginLeft: "20px" }}>N/A</p>,
       sortable: true,
     },
     {
-      name: "Mumbai  Buffer",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Pune Buffer",
-      selector: (row) => row.population,
+      name: "Action",
+      selector: (row) => <button>Mark Defaulter</button>,
       sortable: true,
     },
 
-    {
-      name: "Status",
-      selector: (row) => <button className="btn btn-success">Publish</button>,
-      sortable: true,
-    },
     // {
     //   name: "Action",
     //   cell: (row) => (
@@ -103,14 +100,36 @@ const Prod_Buffer = () => {
   }, [data]);
 
   return (
-    <div className="mt-3">
-      <Table
-        columns={columns}
-        data={filteredData}
-        onSearch={onSearch}
-        title="PRODUCT BUFFER QUANTITY"
-      />
+    <div style={{ margin: "1%", borderRadius: "7px" }}>
+      <div
+        style={{
+          fontWeight: "bold",
+          backgroundColor: "lightgray",
+          border: "1px solid lightgray",
+          padding: "0px 10px",
+        }}
+      >
+        <div style={{ marginTop: "10px" }}>
+          ☰ <span style={{ marginLeft: "10px" }}>Defaulter</span>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Search order/customer email/phone no."
+            style={{ width: "30%", padding: "5px", outline: "none" }}
+          />
+          <button style={{ padding: "5px", marginLeft: "10px" }}>Search</button>
+        </div>
+        <div className="mt-3">
+          <Table
+            columns={columns}
+            data={filteredData}
+            onSearch={onSearch}
+            // title="DEFAULTERS"
+          />
+        </div>
+      </div>
     </div>
   );
 };
-export default Prod_Buffer;
+export default Default;

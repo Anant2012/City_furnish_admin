@@ -12,7 +12,7 @@ const PriceRange = ({ item }) => {
 
   return (
     <>
-      {/* <tr>
+      <tr>
         <td>
           <input type="checkbox" />
         </td>
@@ -82,7 +82,7 @@ const PriceRange = ({ item }) => {
             <button onClick={handleClose}>No</button>
           </Typography>
         </Box>
-      </Modal> */}
+      </Modal>
     </>
   );
 };

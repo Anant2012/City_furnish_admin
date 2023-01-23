@@ -1,13 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const SubList = ({ items, ToggleSidebar }) => {
+  const navigate = useNavigate();
   return (
-    <div className="sub-link">
+    
+    <div className="py-4 pl-9 flex flex-col space-y-2 w-full bg-blue-200/10 rounded-2xl mt-3 transition-transform border-2 border-b-blue-900">
       {items.map((item) => (
-        <div className="sub-item">
-          <Link to={item?.route} onClick={ToggleSidebar}>
-            {item.name}
-          </Link>{" "}
-        </div>
+        <span
+          onClick={() => {
+            ToggleSidebar();
+            navigate(`${item?.route}`);
+          }}
+          className="hover:scale-110 duration-300 cursor-pointer hover:translate-x-5 hover:text-indigo-900 "
+        >
+          {item.name}
+        </span>
       ))}
     </div>
   );

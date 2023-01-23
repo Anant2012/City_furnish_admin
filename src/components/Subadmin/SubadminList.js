@@ -13,7 +13,6 @@ const SubAdminList = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
@@ -47,13 +46,21 @@ const SubAdminList = () => {
       selector: (row) => (
         <div>
           <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
-          <AiFillEye style={{ width: "20px", height: "20px", marginLeft:"10px" }} />
-          <MdDelete style={{ width: "20px", height: "20px", color: "red", marginLeft: "10px" }} />
+          <AiFillEye
+            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+          />
+          <MdDelete
+            style={{
+              width: "20px",
+              height: "20px",
+              color: "red",
+              marginLeft: "10px",
+            }}
+          />
         </div>
       ),
       sortable: true,
     },
-
   ];
 
   const getData = async () => {
@@ -84,16 +91,14 @@ const SubAdminList = () => {
   }, [data]);
 
   return (
-  
     <div className="mt-3">
       <Table
         columns={columns}
         data={filteredData}
         onSearch={onSearch}
         title="SUBSCRIPTIONS LIST"
-        />
+      />
     </div>
-    
   );
 };
 export default SubAdminList;

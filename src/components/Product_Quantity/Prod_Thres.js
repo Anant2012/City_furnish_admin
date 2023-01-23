@@ -6,11 +6,8 @@ import "./prod.css";
 const Prod_Thres = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-  const handleOpen = () => {
-    // to do
-  };
+
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
@@ -107,44 +104,13 @@ const Prod_Thres = () => {
   }, [data]);
 
   return (
-    <div
-      style={{ margin: "1%", borderRadius: "7px", border: "1px solid gray" }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "0px 10px",
-        }}
-      >
-        <div>
-          <div style={{ margin: "1%" }}>
-            ☰{" "}
-            <span style={{ marginLeft: "10px" }}>
-              PRODUCT THRESHOLD QUANTITY{" "}
-            </span>
-          </div>
-          <div style={{ fontWeight: "normal",marginLeft: "12px" }}>
-            Status
-            <select style={{ marginLeft: "10px" }}>
-              <option value="All">All</option>
-
-              <option value="Publish">Publish</option>
-
-              <option value="UnPublish">UnPublish</option>
-            </select>
-          </div>
-        </div>
-        <div className="mt-3">
-          <Table
-            columns={columns}
-            data={filteredData}
-            onSearch={onSearch}
-            // title="PRODUCT QUANTITY LIST"
-          />
-        </div>
-      </div>
+    <div className="mt-3">
+      <Table
+        columns={columns}
+        data={filteredData}
+        onSearch={onSearch}
+        title="PRODUCT THRESHOLD QUANTITY"
+      />
     </div>
   );
 };

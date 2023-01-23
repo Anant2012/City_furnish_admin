@@ -1,35 +1,78 @@
-import { BannerListingItems } from "../../../constants/BannerListing";
-import "./BannerListing.css";
-import Banner from "./Banner";
-import { TfiViewList } from "react-icons/tfi";
+import { useEffect, useState } from "react";
+import Table from "../../Common/Table/Table";
+import { BiEdit } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const BannerListing = () => {
+  const [data, setData] = useState();
+  const [filteredData, setFilteredData] = useState(data);
+
+  const onSearch = (val) => {
+    setFilteredData(
+      data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
+    );
+  };
+  const columns = [
+    { name: "Sub Admin Name", selector: (row) => row.name, sortable: true },
+    {
+      name: "Last Login Date",
+      selector: (row) => row.population,
+      sortable: true,
+    },
+    {
+      name: "Last Logout Date",
+      selector: (row) => row.population,
+      sortable: true,
+    },
+    {
+      name: "Last Login IP",
+      selector: (row) => row.population,
+      sortable: true,
+    },
+    {
+      name: "Status",
+      selector: (row) => <button className="btn btn-success">Active</button>,
+      sortable: true,
+    },
+    {
+      name: "Status",
+      selector: (row) => (
+        <div>
+          <Link to="edit_banner">
+            <BiEdit
+              style={{ width: "20px", height: "20px", color: "#7b5050" }}
+            />
+          </Link>
+        </div>
+      ),
+      sortable: true,
+    },
+  ];
+
+  const getData = async () => {
+    fetch("https://restcountries.com/v2/all")
+      .then((res) => res.json())
+      .then((data) => setData(data))
+      .catch((err) => console.log("errorr", err));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    setFilteredData(data);
+  }, [data]);
+
   return (
-    <div class="container-fluid">
-      <div class="w-auto mt-3 ml-3">
-        <table class="table">
-          <thead>
-            <caption>
-              <TfiViewList /> Banners List
-            </caption>
-            <tr>
-              <th scope="col">Image</th>
-              <th scope="col">Text</th>
-              <th scope="col">Position</th>
-              <th scope="col">Status</th>
-              <th scope="col">Created On</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-            {BannerListingItems.map((item) => (
-              <Banner item={item} />
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="mt-3">
+      <Table
+        columns={columns}
+        data={filteredData}
+        onSearch={onSearch}
+        title="BANNER LIST"
+      />
     </div>
   );
 };
-
 export default BannerListing;

@@ -1,12 +1,14 @@
 input:focus {
   outline: none;
 }
-
 .pass {
   display: flex;
   margin: 40px;
 }
-
+.form-sub-heading {
+  margin: 2%;
+  font-size: 25px;
+}
 .input {
   position: absolute;
   left: 30%;
@@ -144,4 +146,31 @@ input:focus {
     margin-left: 0px;
     /* width:auto; */
   }
+}
+
+@media screen and (min-width: 900px) {
+  .jodi-editor {
+    position: absolute;
+    left: 32.5%;
+    top: -2%;
+    width: 60%;
+  }
+  .jodi-editor-container {
+    position: relative;
+    height: 200px;
+  }
+  .input-container {
+    display: inline-flex;
+    position: relative;
+    left: 16.2%;
+  }
+  .input-container textarea {
+    width: 500px;
+    margin-bottom: 7px;
+  }
+}
+
+code {
+  font-size: 10px;
+  color: black;
 }

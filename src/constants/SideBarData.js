@@ -52,7 +52,10 @@ export const SideBarData = [
   {
     heading: "Product",
     items: [
-      { name: "Selling Product List", route: "admin/product/selling_product_list" },
+      {
+        name: "Selling Product List",
+        route: "admin/product/selling_product_list",
+      },
       {
         name: "Affiliate Product List",
         route: "admin/product/affiliate_product_list",
@@ -61,7 +64,10 @@ export const SideBarData = [
         name: "Product Components List",
         route: "admin/product/product_component_list",
       },
-      { name: "Customization Request", route: "admin/product/customization_request" },
+      {
+        name: "Customization Request",
+        route: "admin/product/customization_request",
+      },
       { name: "Add New Product", route: "admin/product/add_new_product" },
     ],
   },
@@ -96,8 +102,14 @@ export const SideBarData = [
       { name: "Paid Payment", route: "admin/orders/paid_payment" },
       { name: "Failed Payment", route: "admin/orders/failed_payment" },
       { name: "Offline Orders", route: "admin/orders/offline_orders" },
-      { name: "Upfront Payment Links", route: "admin/orders/upfront_payment_link" },
-      { name: "Tenure Extension Link", route: "admin/orders/tenure_extension_link" },
+      {
+        name: "Upfront Payment Links",
+        route: "admin/orders/upfront_payment_link",
+      },
+      {
+        name: "Tenure Extension Link",
+        route: "admin/orders/tenure_extension_link",
+      },
       {
         name: "Tenure Extension History",
         route: "admin/orders/tenure_extension_history",
@@ -119,41 +131,72 @@ export const SideBarData = [
   {
     heading: "Manage Documents",
     items: [
-      { name: "Document",route:"admin/manage_documnets/document" },
-      { name: "Add Document",route:"admin/manage_documnets/add_document" },
-      { name: "Cibil Score Slots",route:"admin/manage_documnets/cibil_score" },
-      { name: "Add new Slot",route:"admin/manage_documnets/NewSlot" },
-      { name: "Show User Documnet",route:"admin/manage_documnets/shou_user_document" },
-
+      { name: "Document", route: "admin/manage_documnets/document" },
+      { name: "Add Document", route: "admin/manage_documnets/add_document" },
+      {
+        name: "Cibil Score Slots",
+        route: "admin/manage_documnets/cibil_score",
+      },
+      { name: "Add new Slot", route: "admin/manage_documnets/NewSlot" },
+      {
+        name: "Show User Documnet",
+        route: "admin/manage_documnets/shou_user_document",
+      },
     ],
   },
   {
     heading: "Coins",
-    items: [{ name: "Coin Details" }, { name: "Coin Transaction List" }],
+    items: [{ name: "Coin Details" , route:"admin/coins/coin_details"}, { name: "Coin Transaction List", route:"admin/coins/coin_list" }],
   },
   {
     heading: "Color",
-    items: [{ name: "Color List",route:"admin/color/color_list" }, { name: "Add Color" ,route:"admin/color/add_new_color"}],
+    items: [
+      { name: "Color List", route: "admin/color/color_list" },
+      { name: "Add Color", route: "admin/color/add_new_color" },
+    ],
   },
   {
     heading: "Offer",
 
-    items: [{ name: "Offer Listing",route:"admin/offer/Offer_list" }, { name: "Add Offer",route:"admin/offer/Add_offer" }],
-
+    items: [
+      { name: "Offer Listing", route: "admin/offer/Offer_list" },
+      { name: "Add Offer", route: "admin/offer/Add_offer" },
+    ],
   },
   {
     heading: "Attribute",
-    items: [{ name: "Attribute List", route:"admin/attribute/attribute_list" }, { name: "Add Attribute",route:"admin/attribute/add_attribute" }],
+    items: [
+      { name: "Attribute List", route: "admin/attribute/attribute_list" },
+      { name: "Add Attribute", route: "admin/attribute/add_attribute" },
+    ],
   },
   {
     heading: " Coupon Codes",
     items: [
-      { name: "Coupon Code List" },
-      { name: "Add Coupon Code" },
-      { name: "Voucher Setting" },
-      { name: "Referral Settings" },
-      { name: "Referral Code List" },
-      { name: "SI CC Discount Setting" },
+      {
+        name: "Coupon Code List",
+        route: "/admin/couponcards/display_couponcards",
+      },
+      {
+        name: "Add Coupon Code",
+        route: "/admin/couponcards/add_couponcard_form",
+      },
+      {
+        name: "Voucher Setting",
+        route: "/admin/couponcards/edit_voucher_form",
+      },
+      {
+        name: "Referral Settings",
+        route: "/admin/couponcards/edit_referral_setting",
+      },
+      {
+        name: "Referral Code List",
+        route: "/admin/couponcards/show_referral_code",
+      },
+      {
+        name: "SI CC Discount Setting",
+        route: "/admin/couponcards/edit_si_discount_setting",
+      },
     ],
   },
   {

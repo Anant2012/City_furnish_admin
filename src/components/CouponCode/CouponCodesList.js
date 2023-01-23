@@ -1,12 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import { FcViewDetails } from "react-icons/fc";
 import { MdDelete } from "react-icons/md";
 import { BiEdit } from "react-icons/bi";
 import { AiFillEye } from "react-icons/ai";
-// import "./Style.css";
 
-const BannerList = () => {
+const CouponCodesList = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
   const handleOpen = () => {
@@ -84,9 +82,9 @@ const BannerList = () => {
         columns={columns}
         data={filteredData}
         onSearch={onSearch}
-        title="BANNER LIST"
+        title="COUPON CODES LIST"
       />
     </div>
   );
 };
-export default BannerList;
+export default CouponCodesList;

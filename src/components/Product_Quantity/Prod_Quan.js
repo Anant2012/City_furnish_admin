@@ -96,43 +96,27 @@ const Prod_Quan = () => {
   useEffect(() => {
     setFilteredData(data);
   }, [data]);
-
+  const actionButtons = (
+    <div>
+      <button className="button">
+        <AiOutlinePlus />
+        Import
+      </button>
+      <button className="button">
+        <AiOutlinePlus />
+        Export
+      </button>
+    </div>
+  );
   return (
-    <div
-      style={{ margin: "1%", borderRadius: "7px", border: "1px solid gray" }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "0px 10px",
-        }}
-      >
-        <div className="but">
-          <div style={{ margin: "1%" }}>
-            ☰ <span style={{ marginLeft: "10px" }}>PRODUCT QUANTITY LIST</span>
-          </div>
-          <div>
-            <button className="button">
-              <AiOutlinePlus />
-              Import
-            </button>
-            <button className="button">
-              <AiOutlinePlus />
-              Export
-            </button>
-          </div>
-        </div>
-        <div className="mt-3">
-          <Table
-            columns={columns}
-            data={filteredData}
-            onSearch={onSearch}
-            // title="PRODUCT QUANTITY LIST"
-          />
-        </div>
-      </div>
+    <div className="mt-3">
+      <Table
+        columns={columns}
+        data={filteredData}
+        onSearch={onSearch}
+        title="PRODUCT QUANTITY LIST"
+        actionButtons={actionButtons}
+      />
     </div>
   );
 };

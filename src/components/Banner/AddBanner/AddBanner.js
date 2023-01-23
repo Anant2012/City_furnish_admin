@@ -1,41 +1,49 @@
-import { TfiViewList } from "react-icons/tfi";
-import "./AddBanner.css";
 const AddBanner = () => {
-  const handleSubmit = () => {
-    // TO DO
-  };
   return (
-    <div class="container-fluid">
-      <div class="w-auto mt-3 ml-3">
-        <table class="table">
-          <thead>
-            <caption>
-              <TfiViewList /> EDIT BANNER
-            </caption>
-          </thead>
-          <tbody class="table-group-divider">
-            <tr>
-              <td>BANNER IMAGE</td>
-              <td>
-                <input type="file" accept="image/*" required />
-              </td>
-            </tr>
-            <tr>
-              <td>BANNER TEXT</td>
-              <td>
-                <input type="text" required />
-              </td>
-            </tr>
-            <tr>
-              <td class="border-none"></td>
-              <td class="border-none">
-                <button onClick={handleSubmit}>Submit</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div
+      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
+    >
+      <div
+        style={{
+          fontWeight: "bold",
+          backgroundColor: "lightgray",
+          border: "1px solid lightgray",
+          padding: "10px",
+        }}
+      >
+        ☰ <span style={{ marginLeft: "10px" }}>ADD BANNER</span>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          BANNER IMAGE <span className="spans">*</span>
+        </div>
+        <div className="input">
+          <input type="file" accept="image/*" required />
+        </div>
+      </div>
+      <div className="pass">
+        <div style={{ marginBottom: "1%" }}>
+          BANNER TEXT <span className="spans">*</span>
+        </div>
+        <div>
+          <input type="text" required className="input"></input>
+        </div>
+      </div>
+
+      <div className="buton">
+        <button
+          style={{
+            color: "white",
+            backgroundColor: "#1876ba",
+            border: "none",
+            padding: "6px",
+          }}
+        >
+          SUBMIT
+        </button>
       </div>
     </div>
   );
 };
+
 export default AddBanner;

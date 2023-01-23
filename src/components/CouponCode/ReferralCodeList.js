@@ -1,17 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import { FcViewDetails } from "react-icons/fc";
-import { MdDelete } from "react-icons/md";
-import { BiEdit } from "react-icons/bi";
 import { AiFillEye } from "react-icons/ai";
-// import "./Style.css";
 
-const BannerList = () => {
+const ReferralCodeList = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-  const handleOpen = () => {
-    // to do
-  };
   const onSearch = (val) => {
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
@@ -45,17 +38,8 @@ const BannerList = () => {
       name: "Status",
       selector: (row) => (
         <div>
-          <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
           <AiFillEye
             style={{ width: "20px", height: "20px", marginLeft: "10px" }}
-          />
-          <MdDelete
-            style={{
-              width: "20px",
-              height: "20px",
-              color: "red",
-              marginLeft: "10px",
-            }}
           />
         </div>
       ),
@@ -84,9 +68,9 @@ const BannerList = () => {
         columns={columns}
         data={filteredData}
         onSearch={onSearch}
-        title="BANNER LIST"
+        title="REFERRAL CODE LIST"
       />
     </div>
   );
 };
-export default BannerList;
+export default ReferralCodeList;

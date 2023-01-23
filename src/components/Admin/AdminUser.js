@@ -1,58 +1,43 @@
 import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import Table from "../Common/Table/Table";
-// import "./Style.css";
 
 const AdminUser = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
   const handleOpen = () => {
-    // to do
+
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
-    { name: "Admin Name", selector: (row) => row.name, sortable: true },
-    { name: "Email ", selector: (row) => row.name, sortable: true },
-    { name: "Admin Type", selector: (row) => row.capital, sortable: true },
+    { name: "Admin Name", selector: (row) => <span className="font-lora tracking-wider text-gray-800 ">{row.name}</span>
+    , sortable: true },
+    { name: "Email ", selector: (row) => <span className="font-lora tracking-wider text-gray-800 ">{row.name}</span>, sortable: true },
+    { name: "Admin Type", selector: (row) => <span className="font-lora tracking-wider text-gray-800 ">{row.capital}</span>, sortable: true },
     {
       name: "Last Login Date",
-      selector: (row) => row.population,
+      selector: (row) => <span className="font-sourserif font-medium tracking-wider text-gray-800 text-md">{row.population}</span>,
       sortable: true,
     },
     {
       name: "Last Logout Date",
-      selector: (row) => row.population,
+      selector: (row) => <span className="font-sourserif font-medium tracking-wider text-gray-800 text-md">{row.population}</span>,
       sortable: true,
     },
     {
       name: "Last Login IP",
-      selector: (row) => row.population,
+      selector: (row) => <span className="font-sourserif font-medium tracking-wider text-gray-800 text-md">{row.population}</span>,
       sortable: true,
     },
     {
       name: "Status",
-      selector: (row) => <button className="btn btn-success">Active</button>,
+      selector: (row) => <span className="bg-green-300/30 text-green-600 font-medium p-2 rounded-xl tracking-wide hover:scale-110 duration-300 ">Active</span>,
       sortable: true,
     },
-    // {
-    //   name: "Action",
-    //   cell: (row) => (
-    //     <button
-    //       onClick={() => handleOpen(row)}
-    //       className="delete-icon"
-    //       data-toggle="tooltip"
-    //       data-placement="bottom"
-    //       title="Delete"
-    //     >
-    //       <MdDelete />
-    //     </button>
-    //   ),
-    // },
   ];
 
   const getData = async () => {
@@ -60,18 +45,6 @@ const AdminUser = () => {
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log("errorr", err));
-
-    // try {
-    //   // console.log(userId);
-    //   const url = "https://restcountries.com/v2/all";
-    //   const response = await axios.get(url);
-    //   if (response.status === 200) {
-    //     console.log("wer", response.data);
-    //     setData(data);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   useEffect(() => {
@@ -82,8 +55,11 @@ const AdminUser = () => {
     setFilteredData(data);
   }, [data]);
 
+  // 
+
+  
   return (
-    <div className="mt-3">
+    <div className="mt-3 ">
       <Table
         columns={columns}
         data={filteredData}

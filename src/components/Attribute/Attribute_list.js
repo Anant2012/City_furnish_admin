@@ -12,7 +12,6 @@ const Attribute_list = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );

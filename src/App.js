@@ -59,24 +59,44 @@ import Cibil_score from "./components/ManageDocuments/Cibil_score";
 import UsersList from "./components/Users/UsersList";
 import UserDashboard from "./components/Users/UserDashboard";
 import BannerList from "./components/Category/BannerList";
+
 import Prod_Components from "./components/Product/Product_Components";
 import Customization_Request from "./components/Product/Customization_Request";
 import Add_New_Product from "./components/Product/Add_New_Product";
+import Coin_Details from "./components/Coins/Coin_Details";
+import Coin_List from "./components/Coins/Coin_List";
+
+import CouponCodesList from "./components/CouponCode/CouponCodesList";
+import AddCouponCode from "./components/CouponCode/AddCouponCode";
+import VoucherSetting from "./components/CouponCode/VoucherSetting";
+import ReferralSetting from "./components/CouponCode/ReferralSetting";
+import ReferralCodeList from "./components/CouponCode/ReferralCodeList";
+import DiscountSetting from "./components/CouponCode/DiscountSetting";
+import Fail_pay from "./components/Order/Fail_pay";
+import Paid_pay from "./components/Order/Paid_pay";
+import Offline_order from "./components/Order/Offline_order";
+import Upfront_pay from "./components/Order/Upfront_pay";
+import Tenure_Ext from "./components/Order/Tenure_ext";
+import Tenure_His from "./components/Order/Tenure_his";
+import Bulk_Order from "./components/Order/Bulk_order";
+import Default from "./components/Order/Default";
+import Office_fur from "./components/Order/Office_fur";
+import Recurring_pay from "./components/Order/Recurring_pay";
+import Payout from "./components/Order/Payout";
+import Zoho_log from "./components/Order/Zoho_log";
+import Zohodesk_log from "./components/Order/Zohodesk_log";
+import E_mandate from "./components/Order/E_mandate";
+import Cust_payment from "./components/Order/Cust_payment";
+
 // import AddNewUser from "./components/Mana";
 
 function App() {
   return (
-    <div className="App">
+    <>
+    {/* // <div className="bg-baby_blue_bg "> */}
       <Sidebar />
-      {/* <Header />
-      <Table /> */}
-      {/* <AddLocation />
-      <AddCity />
-      <AddStateTax />
-      <AddAttribute /> */}
-      {/* <AddOffer /> */}
       <Routes>
-        <Route path="/admin/admin" element={<Home />} />
+        <Route path="/admin" element={<Home />} />
         <Route path="/admin/admin/admin_user" element={<AdminUser />} />
         <Route
           path="/admin/admin/admin_change_password"
@@ -116,7 +136,7 @@ function App() {
         <Route path="/admin/category/category_list" />
 
         <Route path="/admin/category/banner_list" element={<BannerList />} />
-        <Route path="/admin/filter/filter_list" element={<FilterList/>} />
+        <Route path="/admin/filter/filter_list" element={<FilterList />} />
 
         <Route path="/admin/filter/add_filter" element={<AddFilter />} />
         <Route
@@ -127,29 +147,55 @@ function App() {
           path="/admin/product/affiliate_product_list"
           element={<Affliated_productList />}
         />
-        <Route path="/admin/product/product_component_list" element={<Prod_Components/>} />
-        <Route path="/admin/product/customization_request" element={<Customization_Request/>} />
-        <Route path="/admin/product/add_new_product" element={<Add_New_Product/>} />
-        <Route path="/admin/product_quantity/product_quantity" element={<Prod_Quan/>} />
-        <Route path="/admin/product_quantity/product_thresold" element={<Prod_Thres />} />
-        <Route path="/admin/product_quantity/product_buffer" element={<Prod_Buffer />} />
-        <Route path="/admin/product_quantity/out_of_stock" element={<Out_Stock />} />
-        <Route path="/admin/product_quantity/product_out_of_stock" element={<Out_Notification />} />
-        <Route path="/admin/orders/paid_payment" />
-        <Route path="/admin/orders/failed_payment" />
-        <Route path="/admin/orders/offline_orders" />
-        <Route path="/admin/orders/upfront_payment_link" />
-        <Route path="/admin/orders/tenure_extension_link" />
-        <Route path="/admin/orders/tenure_extension_history" />
-        <Route path="/admin/orders/defaluters_list" />
-        <Route path="/admin/orders/office_furniture_order" />
-        <Route path="/admin/orders/bulk_order" />
-        <Route path="/admin/orders/recurring_paymen" />
-        <Route path="/admin/orders/customer_payment" />
-        <Route path="/admin/orders/payou" />
-        <Route path="/admin/orders/orders_e-mandate" />
-        <Route path="/admin/orders/zoho_log" />
-        <Route path="/admin/orders/zoho_desk_logs" />
+        <Route
+          path="/admin/product/product_component_list"
+          element={<Prod_Components />}
+        />
+        <Route
+          path="/admin/product/customization_request"
+          element={<Customization_Request />}
+        />
+        <Route
+          path="/admin/product/add_new_product"
+          element={<Add_New_Product />}
+        />
+        <Route
+          path="/admin/product_quantity/product_quantity"
+          element={<Prod_Quan />}
+        />
+        <Route
+          path="/admin/product_quantity/product_thresold"
+          element={<Prod_Thres />}
+        />
+        <Route
+          path="/admin/product_quantity/product_buffer"
+          element={<Prod_Buffer />}
+        />
+        <Route
+          path="/admin/product_quantity/out_of_stock"
+          element={<Out_Stock />}
+        />
+        <Route
+          path="/admin/product_quantity/product_out_of_stock"
+          element={<Out_Notification />}
+        />
+        <Route path="/admin/product/product_component_list" />
+
+        <Route path="/admin/orders/paid_payment" element={<Paid_pay/>} />
+        <Route path="/admin/orders/failed_payment" element={<Fail_pay/>} />
+        <Route path="/admin/orders/offline_orders" element={<Offline_order/>} />
+        <Route path="/admin/orders/upfront_payment_link" element={<Upfront_pay/>} />
+        <Route path="/admin/orders/tenure_extension_link" element={<Tenure_Ext/>} />
+        <Route path="/admin/orders/tenure_extension_history" element={<Tenure_His/>} />
+        <Route path="/admin/orders/defaluters_list" element={<Default/>} />
+        <Route path="/admin/orders/office_furniture_order" element={<Office_fur/>} />
+        <Route path="/admin/orders/bulk_order" element={<Bulk_Order/>} />
+        <Route path="/admin/orders/recurring_paymen" element={<Recurring_pay/>} />
+        <Route path="/admin/orders/customer_payment" element={<Cust_payment/>} />
+        <Route path="/admin/orders/payout" element={<Payout/>} />
+        <Route path="/admin/orders/orders_e-mandate" element={<E_mandate/>} />
+        <Route path="/admin/orders/zoho_log" element={<Zoho_log/>} />
+        <Route path="/admin/orders/zoho_desk_logs" element={<Zohodesk_log/>} />
         <Route
           path="/admin/attribute/add_attribute"
           element={<AddAttribute />}
@@ -174,8 +220,34 @@ function App() {
           element={<Cibil_score />}
         />
         <Route path="/admin/manage_documnets/shou_user_document" />
+        <Route path="/admin/coins/coin_details" element={<Coin_Details />} />
+        <Route path="/admin/coins/coin_list" element={<Coin_List />} />
         <Route path="/admin/offer/Add_offer" element={<Add_offer />} />
         <Route path="/admin/offer/Offer_list" element={<Offer_list />} />
+        <Route
+          path="/admin/couponcards/display_couponcards"
+          element={<CouponCodesList />}
+        />
+        <Route
+          path="/admin/couponcards/add_couponcard_form"
+          element={<AddCouponCode />}
+        />
+        <Route
+          path="/admin/couponcards/edit_voucher_form"
+          element={<VoucherSetting />}
+        />
+        <Route
+          path="/admin/couponcards/edit_referral_setting"
+          element={<ReferralSetting />}
+        />
+        <Route
+          path="/admin/couponcards/show_referral_code"
+          element={<ReferralCodeList />}
+        />
+        <Route
+          path="/admin/couponcards/edit_si_discount_setting"
+          element={<DiscountSetting />}
+        />
         <Route
           path="/admin/location&tax/add_location"
           element={<AddLocation />}
@@ -241,7 +313,8 @@ function App() {
         />
         <Route path="/admin/cms/display_cms" element={<PagesListing />} />
       </Routes>
-    </div>
+    {/* // </div> */}
+    </>
   );
 }
 
