@@ -3,6 +3,7 @@ import Table from "../Common/Table/Table";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsCheck } from "react-icons/bs";
 import { FaUserEdit } from "react-icons/fa";
+import { RiArrowUpDownLine } from "react-icons/ri";
 
 const Offline_order = () => {
   const [data, setData] = useState();
@@ -53,10 +54,10 @@ const Offline_order = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <input type="number" style={{ width: "70px" }} />
-          <div style={{ color: "blue", marginLeft: "10px" }}>Update</div>
-        </div>
+        <div style={{display:"flex"}}>
+        <input type="number" style={{ width: "70px" , border:"1px solid lightblue" }} />
+        <div style={{ color: "blue", marginLeft: "10px" }}><RiArrowUpDownLine/></div>
+      </div>
       ),
       sortable: true,
     },
@@ -78,13 +79,13 @@ const Offline_order = () => {
     {
       name: "Action",
       selector: (row) => (
-        <div>
-          <BsCheck style={{ width: "20px", height: "24px", color: "green" }} />
+        <div style={{display:"flex"}}>
+          <BsCheck style={{ width: "20px", height: "24px", color: "green" , marginRight:"2px" }} />
           <AiOutlinePlus
-            style={{ width: "20px", height: "24px", color: "brown" }}
+            style={{ width: "20px", height: "24px", color: "brown" , marginRight:"2px"}}
           />
           <FaUserEdit
-            style={{ width: "20px", height: "24px", color: "gray" }}
+            style={{ width: "20px", height: "24px", color: "gray" , marginRight:"2px" }}
           />
         </div>
       ),

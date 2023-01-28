@@ -1,28 +1,21 @@
 const DiscountSetting = () => {
   return (
     <div
-      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
+      className="w-[70%] mx-auto bg-white shadow-sm mt-20 rounded-md"
     >
       <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "10px",
-        }}
+        className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden text-xl"
       >
         ☰ <span style={{ marginLeft: "10px" }}>SI OR CC DISCOUNT SETTING</span>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
+      <div className="pass flex space-x-[18%]">
+        <div style={{ marginBottom: "1%" }} className="font-lora text-xl font-semibold tracking-wide">
           DISCOUNT AMOUNT <span className="spans">*</span>
         </div>
-        <div>
           <input type="text" required className="input"></input>
-        </div>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
+      <div className="pass flex space-x-[18%]">
+        <div style={{ marginBottom: "1%" }} className="font-lora text-xl font-semibold tracking-wide">
           ACTIVE<span className="spans">*</span>
         </div>
         <div className="input">
@@ -32,8 +25,8 @@ const DiscountSetting = () => {
           <label for="no">No</label>
         </div>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
+      <div className="pass flex space-x-[18%]">
+        <div style={{ marginBottom: "1%" }} className="font-lora text-xl font-semibold tracking-wide">
           ENACH MODE<span className="spans">*</span>
         </div>
         <div className="input">
@@ -43,22 +36,13 @@ const DiscountSetting = () => {
           <label for="offf">Off</label>
         </div>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>UPDATED ON</div>
-        <div className="input">04/Mar/2020 02:33:27</div>
+      <div className="pass flex space-x-[18%]">
+        <div style={{ marginBottom: "1%" }} className="font-lora text-xl font-semibold tracking-wide">UPDATED ON</div>
+        <div className="input font-lora text-xl font-semibold tracking-wide">04/Mar/2020 02:33:27</div>
       </div>
-      <div className="buton">
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "#1876ba",
-            border: "none",
-            padding: "6px",
-          }}
-        >
-          UPDATE
+      <button className="w-[20%] h-10 bg-baby_blue text-white rounded-lg mx-auto mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700 relative left-[40%]" type="submit">
+          Update
         </button>
-      </div>
     </div>
   );
 };

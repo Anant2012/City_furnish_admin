@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
+import { AxiosInstance } from "../../AxiosInstance";
 import { GrUpdate } from "react-icons/gr";
 // import "./Style.css";
 
@@ -16,44 +17,69 @@ const FilterList = () => {
     );
   };
   const columns = [
-    { name: "Filter Name", selector: (row) => row.name, sortable: true },
-    { name: "Category Name ", selector: (row) => row.name, sortable: true },
-    { name: "SubCategory Name ", selector: (row) => row.name, sortable: true },
-    { name: "Created On", selector: (row) => row.capital, sortable: true },
+    { name: "Full Name", selector: (row) => row.full_name, sortable: true },
+    { name: "User Name ", selector: (row) => row.user_name, sortable: true },
+    { name: "User ID", selector: (row) => row.id, sortable: true },
+    {
+      name: "Email",
+      selector: (row) => row.email,
+      sortable: true,
+    },
     {
       name: "Status",
-      selector: (row) => <button className="btn btn-success">Publish</button>,
+      selector: (row) =>
+        row.status === "Active" ? (
+          <button className="btn btn-success">Active</button>
+        ) : (
+          <button className="btn">Inactive</button>
+        ),
       sortable: true,
     },
     {
-      name: "Action",
-      selector: (row) => (
-        <div>
-        <GrUpdate style={{marginLeft:"10px"}} />
-        </div>
-      ),
+      name: "Is Offline",
+      selector: (row) => row.is_offline_user,
       sortable: true,
     },
-    // {
-    //   name: "Action",
-    //   cell: (row) => (
-    //     <button
-    //       onClick={() => handleOpen(row)}
-    //       className="delete-icon"
-    //       data-toggle="tooltip"
-    //       data-placement="bottom"
-    //       title="Delete"
-    //     >
-    //       <MdDelete />
-    //     </button>
-    //   ),
-    // },
   ];
+  // const columns = [
+  //   { name: "Filter Name", selector: (row) => row.filter_name, sortable: true },
+  //   { name: "Category Name ", selector: (row) => row.cat_name, sortable: true },
+  //   { name: "SubCategory Name ", selector: (row) => row.subcategory, sortable: true },
+  //   { name: "Created On", selector: (row) => row.created_at, sortable: true },
+  //   {
+  //     name: "Status",
+  //     selector: (row) => <button className="btn btn-success">Publish</button>,
+  //     sortable: true,
+  //   },
+  //   {
+  //     name: "Action",
+  //     selector: (row) => (
+  //       <div>
+  //       <GrUpdate style={{marginLeft:"10px"}} />
+  //       </div>
+  //     ),
+  //     sortable: true,
+  //   },
+  //   // {
+  //   //   name: "Action",
+  //   //   cell: (row) => (
+  //   //     <button
+  //   //       onClick={() => handleOpen(row)}
+  //   //       className="delete-icon"
+  //   //       data-toggle="tooltip"
+  //   //       data-placement="bottom"
+  //   //       title="Delete"
+  //   //     >
+  //   //       <MdDelete />
+  //   //     </button>
+  //   //   ),
+  //   // },
+  // ];
 
   const getData = async () => {
-    fetch("https://restcountries.com/v2/all")
-      .then((res) => res.json())
-      .then((data) => setData(data))
+    // AxiosInstance.get("/api/category/filterlist")
+    AxiosInstance.get("/api/user")
+      .then((res) => setData(res.data))
       .catch((err) => console.log("errorr", err));
 
     // try {

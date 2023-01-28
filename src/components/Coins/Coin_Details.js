@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
+import AddButton from "../Common/ActionsButtons/AddButton";
+import EditButton from "../Common/ActionsButtons/EditButton";
 import Table from "../Common/Table/Table";
-import { FaUserEdit } from "react-icons/fa";
-import { BsPlusLg } from "react-icons/bs";
 import { FcSearch } from "react-icons/fc";
-// import "./Style.css";
 
 const Coin_Details = () => {
   const [data, setData] = useState();
@@ -12,7 +11,6 @@ const Coin_Details = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
@@ -44,68 +42,28 @@ const Coin_Details = () => {
     {
       name: "Action",
       selector: (row) => (
-        <div>
-          <FaUserEdit
-            style={{
-              width: "25px",
-              height: "24px",
-              color: "gray",
-              //   marginLeft: "10px",
-            }}
-          />
-          <BsPlusLg
-            style={{
-              width: "18px",
-              height: "24px",
-              color: "green",
-              //   marginLeft: "10px",
-            }}
-          />
+        <div className="d-flex">
+          <EditButton />
+          <AddButton />
           <FcSearch
             style={{
               width: "25px",
               height: "24px",
               color: "gray",
-              //   marginLeft: "10px",
+              marginLeft: "10px",
             }}
           />
         </div>
       ),
       sortable: true,
     },
-    // {
-    //   name: "Action",
-    //   cell: (row) => (
-    //     <button
-    //       onClick={() => handleOpen(row)}
-    //       className="delete-icon"
-    //       data-toggle="tooltip"
-    //       data-placement="bottom"
-    //       title="Delete"
-    //     >
-    //       <MdDelete />
-    //     </button>
-    //   ),
-    // },
   ];
 
-  const getData = async () => {
+  const getData = () => {
     fetch("https://restcountries.com/v2/all")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log("errorr", err));
-
-    // try {
-    //   // console.log(userId);
-    //   const url = "https://restcountries.com/v2/all";
-    //   const response = await axios.get(url);
-    //   if (response.status === 200) {
-    //     console.log("wer", response.data);
-    //     setData(data);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   useEffect(() => {

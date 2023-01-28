@@ -18,7 +18,10 @@ const SubAdminList = () => {
     );
   };
   const columns = [
-    { name: "Sub Admin Name", selector: (row) => row.name, sortable: true },
+    { name: "Sub Admin Name", selector: (row) => row.name, sortable: true 
+   , style: {
+    textAlign: 'center'
+  }},
     { name: "Email ", selector: (row) => row.name, sortable: true },
     { name: "Admin Type", selector: (row) => row.capital, sortable: true },
     {
@@ -38,23 +41,23 @@ const SubAdminList = () => {
     },
     {
       name: "Status",
-      selector: (row) => <button className="btn btn-success">Active</button>,
+      selector: (row) => <button className="btn btn-success ">Active</button>,
       sortable: true,
     },
     {
       name: "Status",
       selector: (row) => (
-        <div>
+        <div className="flex items-center justify-center ">
           <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
           <AiFillEye
-            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+            style={{ width: "20px", height: "20px", marginLeft: "20px" }}
           />
           <MdDelete
             style={{
               width: "20px",
               height: "20px",
               color: "red",
-              marginLeft: "10px",
+              marginLeft: "20px",
             }}
           />
         </div>
@@ -68,18 +71,6 @@ const SubAdminList = () => {
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log("errorr", err));
-
-    // try {
-    //   // console.log(userId);
-    //   const url = "https://restcountries.com/v2/all";
-    //   const response = await axios.get(url);
-    //   if (response.status === 200) {
-    //     console.log("wer", response.data);
-    //     setData(data);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   useEffect(() => {

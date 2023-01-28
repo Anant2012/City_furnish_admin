@@ -92,72 +92,69 @@ const Upfront_pay = () => {
         style={{ margin: "1%", borderRadius: "7px", border: "1px solid gray" }}
       >
         <div
-          style={{
-            fontWeight: "bold",
-            backgroundColor: "lightgray",
-            border: "1px solid lightgray",
-            padding: "10px",
-          }}
+
+          className="bg-baby_blue font-lora text-2xl py-3 px-2 text-white font-semibold tracking-wide rounded-sm"
+
         >
-          ☰{" "}
-          <span style={{ marginLeft: "10px" }}>
-            UPFRONT PAYMENT LINK CREATION
+          
+          <span className = "span-heading">
+          ☰ {"  "} UPFRONT PAYMENT LINK CREATION
           </span>
         </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Customer Name"
-          ></input>
-        </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Customer Email"
-          ></input>
-        </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Customer Phone No."
-          ></input>
-        </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Order Id"
-          ></input>
-        </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Amount"
-          ></input>
-        </div>
-        <div className="passed">
-          <input
-            type="password"
-            required
-            className="inputss"
-            placeholder="Tenure"
-          ></input>
+        <div className="upfront">
+
+          <div>
+            <input
+              type="password"
+              required
+              className="w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm mb-2 mt-2 min-w-fit"
+              placeholder="Customer Name"
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              required
+              className="w-2/4 -sm py-2 px-3 shadow-sm mb-2 min-w-fit"
+              placeholder="Customer Email"
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              required
+              className="w-2/4 bg-slate-50 rounded-sm py-2 px-3 shadow-sm mb-2 min-w-fit"
+              placeholder="Customer Phone No."
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              required
+              className="w-2/4 bg-slate-50 rounded-sm py-2 px-3 shadow-sm mb-2 min-w-fit"
+              placeholder="Order Id"
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              required
+              className=" w-2/4 bg-slate-50 rounded-sm py-2 px-3 shadow-sm mb-2 min-w-fit"
+              placeholder="Amount"
+            ></input>
+          </div>
+          <div>
+            <input
+              type="password"
+              required
+              className="w-1/3 bg-slate-50 rounded-sm py-2 px-3 shadow-sm mb-2 min-w-fit"
+              placeholder="Tenure"
+            ></input>
+          </div>
         </div>
         <div style={{ textAlign: "center" }}>
           <button
-            style={{
-              padding: "6px",
-            }}
-            className="butonss"
+            className=" w-1/6 h-10 min-w-fit bg-baby_blue text-white rounded-lg  mt-6 mb-4 pl-1 pr-1 hover:scale-105 duration-300 hover:bg-sky-700"
           >
             GENERATE LINK
           </button>

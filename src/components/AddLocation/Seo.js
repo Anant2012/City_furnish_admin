@@ -4,41 +4,33 @@ import React from "react";
 function Seo() {
     return (
         <div
-            style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
         >
-            <div className="pass">
-                <div style={{ marginBottom: "1%" }}>
-                    Meta Title 
-                </div>
-                <div>
-                    <input type="text" required className="input"></input>
-                </div>
-            </div>
-            <div className="pass">
-                <div style={{ marginBottom: "1%" }}>
-                    Meta Keyword 
-                </div>
-                <div>
-                    <textarea className="input" rows="2" cols="30"></textarea>
-                </div>
-            </div>
-            <div className="pass">
-                <div style={{ marginBottom: "1%" }}>
-                    Meta Description 
-                </div>
-                <div>
-                    <textarea className="input" rows="2" cols="30"></textarea>
-                </div>
-            </div>
+                  <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          Meta Title 
+          {/* <span className="spans">*</span> */}
+          </div>
+          <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+        </div>
+
+        <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          Meta Keyword 
+          {/* <span className="spans">*</span> */}
+          </div>
+          <textarea type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+        </div>
+        <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          Meta Description 
+          {/* <span className="spans">*</span> */}
+          </div>
+          <textarea type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+        </div>
             <div className="buton">
                 <button
-                    style={{
-                        color: "white",
-                        backgroundColor: "#1876ba",
-                        border: "none",
-                        padding: "6px",
-                    }}
-                >
+        className="w-[20%] ml-[20%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700"
+        >
                     Submit
                 </button>
             </div>

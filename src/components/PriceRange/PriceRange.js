@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { Modal, Box, Typography } from "@mui/material";
+import "./price.css"
 
 const PriceRange = ({ item }) => {
   const [published, setPublished] = useState(item.status === "active");
@@ -13,7 +14,7 @@ const PriceRange = ({ item }) => {
   return (
     <>
       <tr>
-        <td>
+        <td className="w-1/5">
           <input type="checkbox" />
         </td>
         <td>{item.range}</td>
@@ -37,11 +38,11 @@ const PriceRange = ({ item }) => {
           )}
         </td>
 
-        <td>
-          <Link to="editViewPricing">
-            <BiEdit />
-          </Link>
-          <RiDeleteBin6Fill onClick={hanldeOpen} />
+        <td style={{display:"flex" , padding:"12px" , height:"62"}}>
+            <Link to="editViewPricing">
+              <BiEdit />
+            </Link>
+            <RiDeleteBin6Fill onClick={hanldeOpen} style={{marginLeft:"2px"}}/>
         </td>
       </tr>
       <Modal
@@ -76,7 +77,7 @@ const PriceRange = ({ item }) => {
           <Typography
             id="modal-modal-description"
             sx={{ mt: 3 }}
-            class="actions"
+            className="actions "
           >
             <button onClick={handleClose}>Yes</button>
             <button onClick={handleClose}>No</button>

@@ -1,47 +1,26 @@
 const AddBanner = () => {
   return (
-    <div
-      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
-    >
+    <div className="w-[50%] mx-auto bg-white shadow-sm mt-20 rounded-md">
       <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "10px",
-        }}
+        className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden text-xl"
       >
         ☰ <span style={{ marginLeft: "10px" }}>ADD BANNER</span>
       </div>
-      <div className="pass">
+      <div className="pass flex space-x-[14%]">
         <div style={{ marginBottom: "1%" }}>
           BANNER IMAGE <span className="spans">*</span>
         </div>
-        <div className="input">
           <input type="file" accept="image/*" required />
-        </div>
       </div>
-      <div className="pass">
+      <div className="pass flex space-x-[10%]">
         <div style={{ marginBottom: "1%" }}>
           BANNER TEXT <span className="spans">*</span>
         </div>
-        <div>
           <input type="text" required className="input"></input>
-        </div>
       </div>
-
-      <div className="buton">
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "#1876ba",
-            border: "none",
-            padding: "6px",
-          }}
-        >
-          SUBMIT
+      <button className="w-[20%] h-10 bg-baby_blue text-white rounded-lg mx-auto mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700 relative left-[40%]" type="submit">
+          Submit
         </button>
-      </div>
     </div>
   );
 };

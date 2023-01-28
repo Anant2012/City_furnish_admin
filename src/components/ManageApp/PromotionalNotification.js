@@ -59,31 +59,22 @@ const PromotionalNotification = () => {
       <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0">
           <div
-            style={{
-              margin: "3%",
-              borderRadius: "7px",
-              border: "1px solid gray",
-            }}
+            className="bg-white rounded-md overflow-hidden"
           >
             <div
-              style={{
-                fontWeight: "bold",
-                backgroundColor: "lightgray",
-                border: "1px solid lightgray",
-                padding: "10px",
-              }}
+              className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden"
             >
               ☰{" "}
-              <span style={{ marginLeft: "10px" }}>
+              <span style={{ marginLeft: "10px" }} className="font-lora text-xl font-semibold">
                 PROMOTIONAL NOTIFICATION DASHBOARD
               </span>
             </div>
-            <div style={{ margin: "20px 35px 0 35px" }}>
+            <div style={{ margin: "20px 35px 0 35px" }} className="font-lora text-xl font-semibold">
               Send Promotional Notification
             </div>
             <div className="inner-container">
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Users Filter Option<span className="required">*</span>
                 </div>
                 <select name="users_filter" id="users_filter">
@@ -91,7 +82,7 @@ const PromotionalNotification = () => {
                 </select>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Notification Title<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -103,7 +94,7 @@ const PromotionalNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Notification Heading<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -115,7 +106,7 @@ const PromotionalNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Meassge Body<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -123,7 +114,7 @@ const PromotionalNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Badge Icon<span className="required">*</span>
                   <div className="sub-label">
                     (Image size :{" "}
@@ -139,15 +130,7 @@ const PromotionalNotification = () => {
               </div>
             </div>
             <div>
-              <button
-                style={{
-                  color: "white",
-                  backgroundColor: "#1876ba",
-                  border: "none",
-                  padding: "6px",
-                  margin: "5px 35px 10px 35px",
-                }}
-              >
+            <button className="w-[24%] ml-[32%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700 font-lora text-md font-semibold">
                 SEND NOTIFICATION
               </button>
             </div>

@@ -58,29 +58,20 @@ const UserDashboard = () => {
     <div className="container-fluid mt-4">
       <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0">
-          <div style={{ width: "100%", margin: "1%" }}>
-            <div
-              style={{
-                padding: "10px 10px",
-                fontWeight: "bold",
-                backgroundColor: "#adb5bd",
-              }}
+          <div className="">
+            <div className="flex items-center space-x-2 bg-baby_blue text-white font-lora text-3xl py-2 px-3 tracking-wide font-semibold"
             >
-              <GrLineChart />
+              <GrLineChart className="text-white"/>
               <span style={{ margin: "0px 15px" }}>USERS DASHBOARD</span>
             </div>
             <div
-              style={{
-                fontWeight: "bold",
-                backgroundColor: "lightgray",
-                padding: "10px 10px",
-              }}
+              className="py-2 px-2 bg-blue-50 tracking-wider"
             >
               81290 users registered in this site
             </div>
-            <table className="rwd-table">
+            <table className="rwd-table text-center font-lora text-lg tracking-wide">
               <tr>
-                <td>Active Users</td>
+                <td className="">Active Users</td>
                 <td className="tab">81289</td>
               </tr>
               <tr>

@@ -42,17 +42,17 @@ const CouponCodesList = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
+        <div className="flex">
           <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
           <AiFillEye
-            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
+            style={{ width: "20px", height: "20px", marginLeft: "20px" }}
           />
           <MdDelete
             style={{
               width: "20px",
               height: "20px",
               color: "red",
-              marginLeft: "10px",
+              marginLeft: "20px",
             }}
           />
         </div>

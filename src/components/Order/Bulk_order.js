@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
 // import { AiOutlinePlus } from "react-icons/ai";
 // import { BsCheck } from "react-icons/bs";
@@ -11,7 +11,6 @@ const Bulk_Order = () => {
     // to do
   };
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
@@ -50,21 +49,6 @@ const Bulk_Order = () => {
       ),
       sortable: true,
     },
-
-    // {
-    //   name: "Action",
-    //   cell: (row) => (
-    //     <button
-    //       onClick={() => handleOpen(row)}
-    //       className="delete-icon"
-    //       data-toggle="tooltip"
-    //       data-placement="bottom"
-    //       title="Delete"
-    //     >
-    //       <MdDelete />
-    //     </button>
-    //   ),
-    // },
   ];
 
   const getData = async () => {
@@ -72,18 +56,6 @@ const Bulk_Order = () => {
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log("errorr", err));
-
-    // try {
-    //   // console.log(userId);
-    //   const url = "https://restcountries.com/v2/all";
-    //   const response = await axios.get(url);
-    //   if (response.status === 200) {
-    //     console.log("wer", response.data);
-    //     setData(data);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   useEffect(() => {
@@ -95,70 +67,13 @@ const Bulk_Order = () => {
   }, [data]);
 
   return (
-    <div style={{ margin: "1%", borderRadius: "7px" }}>
-      <div
-      // style={{
-      //   fontWeight: "bold",
-      //   backgroundColor: "lightgray",
-      //   border: "1px solid lightgray",
-      //   padding: "0px 10px",
-      // }}
-      >
-        <div
-          style={
-            {
-              // display: "flex",
-              // margin: "1%",
-              // justifyContent: "space-between",
-            }
-          }
-        >
-          {/* <div>
-            ☰{" "}
-            <span style={{ marginLeft: "10px" }}>
-               Order List
-            </span>
-          </div> */}
-          {/* <div>
-            <button>
-              <BsPlusLg />
-              Categorize
-            </button>
-            <button>
-              <CgDanger />
-              DeCategorize
-            </button>
-            <button>
-              <BsPlusLg />
-              Globalize
-            </button>
-            <button>
-              <CgDanger />
-              Localize
-            </button>
-            <button>
-              <BsCheckLg />
-              Publish
-            </button>
-            <button>
-              <CgDanger />
-              UnPublish
-            </button>
-            <button>
-              <ImCross />
-              Delete
-            </button>
-          </div> */}
-        </div>
-        <div className="mt-3">
-          <Table
-            columns={columns}
-            data={filteredData}
-            onSearch={onSearch}
-            title="BULK ORDER "
-          />
-        </div>
-      </div>
+    <div className="mt-3">
+      <Table
+        columns={columns}
+        data={filteredData}
+        onSearch={onSearch}
+        title="BULK ORDER "
+      />
     </div>
   );
 };

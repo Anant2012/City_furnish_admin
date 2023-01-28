@@ -6,98 +6,81 @@ import { useState } from "react";
 function AddStateTax() {
   const [active, setActive] = useState( "active");
   return (
-    <div style={{ margin:"3%",borderRadius: "7px", border: "1px solid gray" }}>
+    <div
+    className='w-[70%] shadow-sm'
+      style={{ margin: "3% auto",background: '#fff' }}
+    >
       <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "10px",
-        }}
-      >
-        ☰ <span style={{ marginLeft: "10px" }}>ADD NEW OFFER</span>
+        // style={{
+        //   fontWeight: "bold",
+        //   backgroundColor: "lightgray",
+        //   border: "1px solid lightgray",
+        //   padding: "10px",
+        // }}
+        className="bg-baby_blue font-lora text-2xl py-3 px-2 text-white font-semibold tracking-wider"
+      >          ☰ <span style={{ marginLeft: "10px" }}>ADD NEW OFFER</span>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          COUNTRY NAME <span className="spans">*</span>
-         
-        </div>
-        <div>
-        <select className="input">
+      <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          CITY NAME <span className="spans">*</span>
+          </div>
+        <select className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm">
             <option>India</option>
             <option>Australia</option>
             <option>Brazil</option>
           </select>
-        </div>
       </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-         STATE NAME <span className="spans" placeholder="On your First Order">*</span>
+      <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          STATE NAME <span className="spans">*</span>
+          </div>
+          <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
         </div>
-        <div>
-          <input
-            type="text"
-            required
-            className="input"
-            placeholder="On Your First Order"
-          ></input>
-        </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-         STATE CODE <span className="spans" >*</span>
-        </div>
-        
-        <div>
-          <input type="text" className="input" placeholder='SHORT3M'></input>
-        </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-         STATE TAX(%) <span className="spans" >*</span>
-        </div>
-        
-        <div>
-          <input type="text" className="input" placeholder='1200'></input>
-        </div>
-      </div>
 
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          STATUS <span className="spans" >*</span>
+        <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          STATE CODE <span className="spans">*</span>
+          </div>
+          <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
         </div>
-        <div className="input">
-             {active ? (
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onClick={() => setActive(!active)}
-              >
-                UnActive
-              </button>
-            ) : (
-              <button
-                type="button"
-                class="btn btn-success"
-                onClick={() => setActive(!active)}
-              >
-                Active
-              </button>
-            )}
-          
+        <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+          <div className="font-semibold tracking-wide text-lg w-1/3">
+          STATE TAX(%) <span className="spans">*</span>
+          </div>
+          <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
         </div>
-      </div>
 
-    
 
+        <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+   <div className="font-semibold tracking-wide text-lg w-1/3">
+          STATUS
+          {/* <span className="spans">*</span> */}
+          </div>
+
+     <div className="w-1/2">
+     {!active ? (
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onClick={() => setActive(!active)}
+          >
+           Inactive
+          </button>
+        ) : (
+          <button
+            type="button"
+            class="btn btn-success"
+            onClick={() => setActive(!active)}
+          >
+            Active
+          </button>
+        )}
+        </div>
+        </div>
+ 
       <div className="buton">
         <button
-          style={{
-            color: "white",
-            backgroundColor: "#1876ba",
-            border: "none",
-            padding: "6px",
-          }}
+        className="w-[20%] ml-[20%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700"
         >
           SUBMIT
         </button>

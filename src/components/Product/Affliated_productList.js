@@ -1,20 +1,26 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import { FaUserEdit } from "react-icons/fa";
 import { BsPlusLg } from "react-icons/bs";
-import { AiFillEye } from "react-icons/ai";
-import { MdDelete } from "react-icons/md";
 import { CgDanger } from "react-icons/cg";
 import { BsCheckLg } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
+import { RiArrowUpDownLine } from "react-icons/ri";
 import "./productList.css";
+import EditButton from "../Common/ActionsButtons/EditButton";
+import ViewButton from "../Common/ActionsButtons/ViewButton";
+import AddButton from "../Common/ActionsButtons/AddButton";
+import DeleteButton from "../Common/ActionsButtons/DeleteButton";
 
 const Affliated_productList = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-  const handleOpen = () => {
+  const handleViewClick = () => {
     // to do
   };
+  const handleEditClick = () => {
+    // to do
+  };
+
   const onSearch = (val) => {
     console.log("called onsearch fun", val);
     setFilteredData(
@@ -32,9 +38,14 @@ const Affliated_productList = () => {
     {
       name: "Position",
       selector: (row) => (
-        <div>
-          <input type="number" style={{ width: "70px" }} />
-          <div style={{ color: "blue", marginLeft: "10px" }}>Update</div>
+        <div style={{ display: "flex" }}>
+          <input
+            type="number"
+            style={{ width: "70px", border: "1px solid lightblue" }}
+          />
+          <div style={{ color: "blue", marginLeft: "10px" }}>
+            <RiArrowUpDownLine />
+          </div>
         </div>
       ),
       sortable: true,
@@ -58,54 +69,22 @@ const Affliated_productList = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <FaUserEdit
-            style={{ width: "20px", height: "24px", color: "gray" }}
-          />
-          <AiFillEye
-            style={{ width: "20px", height: "24px", color: "brown" }}
-          />
-          <BsPlusLg
-            style={{ width: "20px", height: "24px", color: "green" }}
-          />
-          <MdDelete style={{ width: "20px", height: "24px", color: "brown" }} />
+        <div className="d-flex">
+          <EditButton />
+          <ViewButton />
+          <AddButton />
+          <DeleteButton />
         </div>
       ),
       sortable: true,
     },
-    // {
-    //   name: "Action",
-    //   cell: (row) => (
-    //     <button
-    //       onClick={() => handleOpen(row)}
-    //       className="delete-icon"
-    //       data-toggle="tooltip"
-    //       data-placement="bottom"
-    //       title="Delete"
-    //     >
-    //       <MdDelete />
-    //     </button>
-    //   ),
-    // },
   ];
 
-  const getData = async () => {
+  const getData = () => {
     fetch("https://restcountries.com/v2/all")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log("errorr", err));
-
-    // try {
-    //   // console.log(userId);
-    //   const url = "https://restcountries.com/v2/all";
-    //   const response = await axios.get(url);
-    //   if (response.status === 200) {
-    //     console.log("wer", response.data);
-    //     setData(data);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
   };
 
   useEffect(() => {

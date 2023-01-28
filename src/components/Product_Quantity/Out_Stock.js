@@ -84,64 +84,40 @@ const Out_Stock = () => {
     setFilteredData(data);
   }, [data]);
 
+  const subHeader = (<div>
+    <label className='m-0'>From: </label>
+    <input
+      type="date"
+      placeholder="select start Date"
+      style={{ margin: "1px 5px" }}
+      className='px-2 py-1 rounded-md bg-slate-100'
+    ></input>
+    <label style={{marginLeft:'1rem'}} className=''>To: </label>
+    <input
+      type="date"
+      placeholder="select end date"
+      style={{ margin: "1px 5px" }}
+      className='px-2 py-1 rounded-md bg-slate-100'
+    ></input>
+    <button style={{marginLeft:'1rem',padding:'0.2rem 0.5rem',border:'1px solid rgb(77,112,253)',color:'#095e88',borderRadius:'0.3rem',background:'rgba(77,112,253,0.3)'}} className="button">Search</button>
+    <button style={{marginLeft:'1rem',padding:'0.2rem 0.5rem',border:'1px solid rgb(77,112,253)',color:'#095e88',borderRadius:'0.3rem',background:'rgba(77,112,253,0.3)'}} className="button">Export</button>
+  </div>)
+
   return (
-    <div
-      style={{ margin: "1%", borderRadius: "7px", border: "1px solid gray" }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "0px 10px",
-        }}
-      >
-        <div>
-          <div className="bot">
-            <div style={{ margin: "1%" }}>
-              ☰{" "}
-              <span style={{ marginLeft: "10px" }}>
-                OUT OF STOCK & IN STOCK PRODUCT
-              </span>
-            </div>
-            <div>
-              <label>From: </label>
-              <input
-                type="date"
-                placeholder="select start Date"
-                style={{ margin: "1px 5px" }}
-              ></input>
-              <label>To: </label>
-              <input
-                type="date"
-                placeholder="select end date"
-                style={{ margin: "1px 5px" }}
-              ></input>
-              <button className="button">Search</button>
-              <button className="button">Export</button>
-            </div>
-          </div>
-          {/* <div style={{ fontWeight: "normal", marginLeft: "12px" }}>
-            Status
-            <select style={{ marginLeft: "10px" }}>
-              <option value="All">All</option>
+    <div className="mt-3">
+    <Table
+      columns={columns}
+      data={filteredData}
+      onSearch={onSearch}
+      // title="PRODUCT QUANTITY LIST"
+      extraSubHeader={subHeader}
+      title="OUT OF STOCK & IN STOCK PRODUCT"
+    />
 
-              <option value="Publish">Publish</option>
-
-              <option value="UnPublish">UnPublish</option>
-            </select>
-          </div> */}
-        </div>
-        <div className="mt-3">
-          <Table
-            columns={columns}
-            data={filteredData}
-            onSearch={onSearch}
-            // title="PRODUCT QUANTITY LIST"
-          />
-        </div>
-      </div>
     </div>
+    
   );
 };
 export default Out_Stock;
+
+ 

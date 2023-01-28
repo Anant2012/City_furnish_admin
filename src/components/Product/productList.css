@@ -1,5 +1,18 @@
-.button{
-    margin: 0px 5px;
-    border: none;
-    font-size: 12px;
+.button {
+  margin: 0px 5px;
+  border: none;
+  font-size: 12px;
+}
+svg {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header .fold {
+    margin-top: 10px;
+  }
 }

@@ -8,35 +8,73 @@ function Content() {
     return (
         <div >
             <form>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Country Name </label><span className="spans">*</span>
-                    <input type="text" className="input5"></input>
+            <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+          COUNTRY NAME <span className="spans">*</span>
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Iso Code 2 </label>
-                    <input type="text" required className="input5"></input>
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Iso Code 2 
+          {/* <span className="spans">*</span> */}
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Iso Code 3 </label>
-                    <input type="text" required className="input5"></input>
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Iso Code 3 
+          {/* <span className="spans">*</span> */}
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Country Shipping Cost </label>
-                    <input type="text" className="input5"></input>
+
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Country Shipping Cost
+          {/* <span className="spans">*</span> */}
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Country Tax</label>
-                    <input type="text" className="input5"></input>
+
+
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Country Tax
+          {/* <span className="spans">*</span> */}
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Currency Symbol</label><span className="spans">*</span>
-                    <input type="text" className="input5"></input>
+
+
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Country Symbol
+          <span className="spans">*</span>
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <div style={{ margin: "2%" }} className="Settings">
-                    <label htmlFor="">Currency</label><span className="spans">*</span>
-                    <input type="text" className="input5"></input>
+
+                <div className="font-lora flex  items-center mt-4 ml-3 space-x-7">
+                <div className="font-semibold tracking-wide text-lg w-1/3">
+                Currency
+          <span className="spans">*</span>
+          </div>
+                    <input type="text" required className=" w-1/2 bg-slate-50 rounded-sm py-2 px-3 shadow-sm" placeholder="Write Here ..." />
+
                 </div>
-                <button className="butoon">SUBMIT</button>
+
+                <button 
+        className="w-[20%] ml-[35%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700"
+        >
+            SUBMIT
+        </button>
             </form>
         </div>
     );

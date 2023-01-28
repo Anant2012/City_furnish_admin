@@ -7,3 +7,36 @@
   height: 1.5em;
   width: 1.5em;
 }
+
+.pass{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.pass .pass-left{
+  width: 45%;
+}
+.pass .pass-right{
+  width: 55%;
+}
+.pass .pass-right input{
+  width: 100%;
+}
+.addTemplate{
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  .addFilter {
+      width: 70%;
+  }
+  .pass{
+      flex-direction: column;
+  }
+  .pass .pass-left{
+      width: 100%;
+  }
+  .pass .pass-right{
+      width: 100%;
+  }
+}

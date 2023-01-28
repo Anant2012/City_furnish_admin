@@ -2,68 +2,91 @@ import "../Admin/Style.css";
 
 const AddEmailTemplate = () => {
   return (
-    <div
-      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
-    >
+    <div className="w-[100%] h-[100%] flex item-center justify-center">
+
       <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "10px",
-        }}
+      className = "rounded-sm border-1 border-blue-500 m-3 addFilter"
       >
-        ☰ <span style={{ marginLeft: "10px" }}>ADD EMAIL TEMPLATE</span>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          TEMPLATE NAME <span className="spans">*</span>
+        <div className="bg-baby_blue rounded-t-sm font-lora text-basic md:text-2xl py-3 px-2 text-white font-semibold tracking-wider ">
+          ☰ <span style={{ marginLeft: "10px" }}>ADD EMAIL TEMPLATE</span>
         </div>
-        <div>
-          <input type="text" required className="input"></input>
+        <div className="pass">
+            <div style={{ marginBottom: "1%" }} className = "pass-left">
+              TEMPLATE NAME <span className="spans">*</span>
+            </div>
+            <div className="pass-right">
+              <input type="text" required className=" w-1/5 min-w-fit bg-slate-50 rounded-sm py-2 px-3 shadow-sm"></input>
+            </div>
+          </div>
+        <div className="pass">
+            <div style={{ marginBottom: "1%" }} className = "pass-left">
+            EMAIL SUBJECT <span className="spans">*</span>
+            </div>
+            <div className="pass-right">
+              <input type="text" required className=" w-1/5 min-w-fit bg-slate-50 rounded-sm py-2 px-3 shadow-sm"></input>
+            </div>
+          </div>
+        <div className="pass">
+            <div style={{ marginBottom: "1%" }} className = "pass-left">
+            SENDER NAME <span className="spans">*</span>
+            </div>
+            <div className="pass-right">
+              <input type="text" required className=" w-1/5 min-w-fit bg-slate-50 rounded-sm py-2 px-3 shadow-sm"></input>
+            </div>
+          </div>
+        {/* <div className="pass">
+          <div style={{ marginBottom: "1%" }}>
+            EMAIL SUBJECT <span className="spans">*</span>
+          </div>
+          <div>
+            <input type="text" required className="input"></input>
+          </div>
         </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          EMAIL SUBJECT <span className="spans">*</span>
+        <div className="pass">
+          <div style={{ marginBottom: "1%" }}>
+            SENDER NAME <span className="spans">*</span>
+          </div>
+          <div>
+            <input type="text" required className="input"></input>
+          </div>
+        </div> */}
+          <div className="pass">
+            <div style={{ marginBottom: "1%" }} className = "pass-left">
+            SENDER EMAIL ADDRESS <span className="spans">*</span>
+            </div>
+            <div className="pass-right">
+              <input type="text" required className=" w-1/5 min-w-fit bg-slate-50 rounded-sm py-2 px-3 shadow-sm"></input>
+            </div>
+          </div>        
+          <div className="pass">
+            <div style={{ marginBottom: "1%" }} className = "pass-left">
+            EMAIL DESCRIPTION <span className="spans">*</span>
+            </div>
+            <div className="pass-right">
+              <input type="text" required className=" w-1/5 min-w-fit bg-slate-50 rounded-sm py-2 px-3 shadow-sm"></input>
+            </div>
+          </div>
+        {/* <div className="pass">
+          <div style={{ marginBottom: "1%" }}>
+            SENDER EMAIL ADDRESS <span className="spans">*</span>
+          </div>
+          <div>
+            <input type="text" required className="input"></input>
+          </div>
         </div>
-        <div>
-          <input type="text" required className="input"></input>
+        <div className="pass">
+          <div style={{ marginBottom: "1%" }}>EMAIL DESCRIPTION</div>
+          <div>
+            <input type="text" className="input"></input>
+          </div>
+        </div> */}
+        <div className="buton">
+          <button
+            className="w-1/2 ml-[32%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700"
+          >
+            SUBMIT
+          </button>
         </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          SENDER NAME <span className="spans">*</span>
-        </div>
-        <div>
-          <input type="text" required className="input"></input>
-        </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>
-          SENDER EMAIL ADDRESS <span className="spans">*</span>
-        </div>
-        <div>
-          <input type="text" required className="input"></input>
-        </div>
-      </div>
-      <div className="pass">
-        <div style={{ marginBottom: "1%" }}>EMAIL DESCRIPTION</div>
-        <div>
-          <input type="text" className="input"></input>
-        </div>
-      </div>
-      <div className="buton">
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "#1876ba",
-            border: "none",
-            padding: "6px",
-          }}
-        >
-          SUBMIT
-        </button>
       </div>
     </div>
   );

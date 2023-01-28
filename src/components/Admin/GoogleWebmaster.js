@@ -6,14 +6,20 @@ const GoogleWebmaster = () => {
   const [content, setContent] = useState("");
 
   return (
-    <div style={{ margin: "2%" }}>
-      <div className="form-sub-heading">Search Engine Information</div>
-      <div style={{ margin: "2%" }} className="Settings">
-        <label>META TITLE </label>
-        <input type="text" className="input5" />
+    <div style={{ margin: "2%" }} className="font-lora">
+      <div className="form-sub-heading  cursor-pointer duration-300 hover:text-green-200 font-semibold">
+        Search Engine Information
       </div>
-      <div style={{ margin: "2%" }} className="Settings jodi-editor-container">
-        <label>META KEYWORD </label>
+      <div style={{ margin: "2%" }} className="Settings flex space-x-[7%]">
+        <label className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold w-[20%]">
+          META TITLE{" "}
+        </label>
+        <input type="text" className="input5 w-[50%]" />
+      </div>
+      <div style={{ margin: "2%" }} className="Settings flex space-x-[5%] jodi-editor-container">
+        <label className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold w-[20%]">
+          META KEYWORD{" "}
+        </label>
         <div className="jodi-editor">
           <JoditEditor
             ref={editor}
@@ -22,16 +28,20 @@ const GoogleWebmaster = () => {
           />
         </div>
       </div>
-      <div style={{ margin: "2%" }} className="Settings">
-        <label>META DESCRIPTION </label>
-        <textarea className="input5" rows={2} cols={40} />
+      <div style={{ margin: "2%" }} className="Settings flex space-x-[7%]">
+        <label className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold w-[20%]">
+          META DESCRIPTION{" "}
+        </label>
+        <textarea className="input5 w-[50%]" rows={2} cols={40} />
       </div>
       <div className="form-sub-heading" style={{ marginTop: "5%" }}>
         Google Webmaster Info
       </div>
-      <div style={{ margin: "2%" }} className="Settings">
-        <label>GOOGLE ANALYTICS CODE </label>
-        <div className="input-container">
+      <div style={{ margin: "2%" }} className="Settings flex space-x-[1%]">
+        <label className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold w-[20%]">
+          GOOGLE ANALYTICS CODE{" "}
+        </label>
+        <div className="input-container w-[60%]">
           <div
             style={{
               display: "flex",
@@ -67,8 +77,10 @@ const GoogleWebmaster = () => {
           </div>
         </div>
       </div>
-      <div style={{ margin: "2%" }} className="Settings">
-        <label>GOOGLE ANALYTICS CODE </label>
+      <div style={{ margin: "2%" }} className="Settings flex space-x-[1%]">
+        <label className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold w-[20%]">
+          GOOGLE ANALYTICS CODE{" "}
+        </label>
         <div className="input-container">
           <div
             style={{
@@ -91,6 +103,9 @@ const GoogleWebmaster = () => {
           </div>
         </div>
       </div>
+      <button className="w-[20%] h-10 bg-baby_blue text-white rounded-lg mx-auto mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700 relative left-[40%]" type="submit">
+          Submit
+        </button>
     </div>
   );
 };

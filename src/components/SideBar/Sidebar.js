@@ -43,7 +43,8 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className={`sidebar ${isOpen === true ? "active" : ""} `}>
+      <div className={`sidebar ${isOpen === true ? "active" : ""} 
+       w-[280px]`}>
         <div className="sd-header">
           <h4 className="mb-0 tracking-wider mx-auto text-3xl text-baby_blue font-sourserif" style={{cursor:"pointer"}} onClick={Homepage}>Dashboard</h4>
           <div onClick={ToggleSidebar}>

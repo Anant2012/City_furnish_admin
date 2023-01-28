@@ -13,129 +13,167 @@ import { BsGift } from "react-icons/bs";
 import { TbNews } from "react-icons/tb";
 import { SlPaypal } from "react-icons/sl";
 import { HiOutlineHome } from "react-icons/hi";
+
 function Header() {
   return (
     <div>
-      <div
-        className="container"
-        style={{
-          marginTop: "3%",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          textAlign: "center",
-        }}
-      >
-        <span className="css">
-          <HiUsers className="iconsCss" />
-          Users
+      <div className="w-full mt-5 px-48 flex flex-wrap gap-x-6 justify-center gap-y-5">
+        <span
+          className="css shadow-2xl bg-white rounded-xl 
+         cursor-pointer px-4 py-2"
+        >
+          <HiUsers className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Users
+          </span>
         </span>
-        <span className="css">
-          <GoTools className="iconsCss" />
-          Settings
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <GoTools className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Settings
+          </span>
         </span>
-        <span className="css">
-          <ImUsers className="iconsCss" />
-          Sellers
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <ImUsers className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Sellers
+          </span>
         </span>
-        <span className="css">
-          <BsBoxArrowUp className="iconsCss" />
-          Category
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <BsBoxArrowUp className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Category
+          </span>
         </span>
-        <span className="css">
-          <AiFillFolder className="iconsCss" />
-          Product
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <AiFillFolder className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Product
+          </span>
         </span>
-        <span className="css">
-          <MdOutlineFolderSpecial className="iconsCss" />
-          Fancy Box
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <MdOutlineFolderSpecial className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Fancy Box
+          </span>
         </span>
-        <span className="css">
-          <RiFileList3Line className="iconsCss" />
-          List
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <RiFileList3Line className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            List
+          </span>
         </span>
-        <span className="css">
-          <RiCoupon4Line className="iconsCss" />
-          Coupons
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <RiCoupon4Line className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Coupons
+          </span>
         </span>
-        <span className="css">
-          <BsGift className="iconsCss" />
-          Gift Cards
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <BsGift className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Gift Cards
+          </span>
         </span>
-        <span className="css">
-          <TbNews className="iconsCss" />
-          Newsletter
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <TbNews className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Newsletter
+          </span>
         </span>
-        <span className="css">
-          <HiOutlineHome className="iconsCss" />
-          Location
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <HiOutlineHome className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Location
+          </span>
         </span>
-        <span className="css">
-          <RiPagesLine className="iconsCss" />
-          Pages
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <RiPagesLine className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            {" "}
+            Pages
+          </span>
         </span>
-        <span className="css">
-          <SlPaypal className="iconsCss" />
-          Payment
+        <span
+          className="css shadow-2xl bg-white px-4 py-1 rounded-xl 
+         cursor-pointer"
+        >
+          <SlPaypal className="iconsCss text-blue-900" />
+          <span className="font-lora text-lg mx-auto text-blue-900 font-medium tracking-wide">
+            Payment
+          </span>
         </span>
       </div>
-      <div className="ALLprod container" style={{}}>
-        <span className="products">
-          TOTAL PRODUCTS
-          <p
-            style={{
-              textAlign: "center",
-              color: "#c16a1c",
-              fontWeight: "normal",
-            }}
-          >
+      <div className="flex space-x-5 justify-center mt-5" style={{}}>
+        <span className="flex flex-col space-y-3 bg-blue-100/20 rounded-2xl h-28 px-2 justify-center border-2 border-blue-900/30 shadow-xl">
+          <span className="font-lora tracking-wider font-semibold text-blue-900">
+            TOTAL PRODUCTS
+          </span>
+          <p className="text-2xl font-semibold font-ptsherif text-blue-800">
             265
           </p>
         </span>
-        <span className="products">
-          TOTAL USERS
+        <span className="flex flex-col space-y-3 bg-blue-100/20 rounded-2xl h-28 px-2 justify-center border-2 border-blue-900/30 shadow-xl">
+          <span className="font-lora tracking-wider font-semibold text-blue-900">TOTAL USERS</span>
           <p
-            style={{
-              textAlign: "center",
-              color: "#c16a1c",
-              fontWeight: "normal",
-            }}
+            className="text-2xl font-semibold font-ptsherif text-blue-800"
           >
             81289
           </p>
         </span>
-        <span className="products">
-          TOTAL SELLERS
+        <span className="flex flex-col space-y-3 bg-blue-100/20 rounded-2xl h-28 px-2 justify-center border-2 border-blue-900/30 shadow-xl">
+          <span className="font-lora tracking-wider font-semibold text-blue-900">TOTAL SELLERS</span>
           <p
-            style={{
-              textAlign: "center",
-              color: "#c16a1c",
-              fontWeight: "normal",
-            }}
+            className="text-2xl font-semibold font-ptsherif text-blue-800"
           >
             42
           </p>
         </span>
-        <span className="products">
-          TOTAL GIFT CARDS
+        <span className="flex flex-col space-y-3 bg-blue-100/20 rounded-2xl h-28 px-2 justify-center border-2 border-blue-900/30 shadow-xl">
+          <span className="font-lora tracking-wider font-semibold text-blue-900">TOTAL GIFT CARDS</span>
           <p
-            style={{
-              textAlign: "center",
-              color: "#c16a1c",
-              fontWeight: "normal",
-            }}
+            className="text-2xl font-semibold font-ptsherif text-blue-800"
           >
             0
           </p>
         </span>
-        <span className="products">
-          TOTAL SUBSCRIBERS
+        <span className="flex flex-col space-y-3 bg-blue-100/20 rounded-2xl h-28 px-2 justify-center border-2 border-blue-900/30 shadow-xl">
+          <span className="font-lora tracking-wider font-semibold text-blue-900">TOTAL SUBSCRIBERS</span>
           <p
-            style={{
-              textAlign: "center",
-              color: "#c16a1c",
-              fontWeight: "normal",
-            }}
+            className="text-2xl font-semibold font-ptsherif text-blue-800"
           >
             0
           </p>

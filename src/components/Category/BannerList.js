@@ -1,10 +1,8 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import DeleteButton from "../Common/ActionsButtons/DeleteButton";
+import EditButton from "../Common/ActionsButtons/EditButton";
+import ViewButton from "../Common/ActionsButtons/ViewButton";
 import Table from "../Common/Table/Table";
-import { FcViewDetails } from "react-icons/fc";
-import { MdDelete } from "react-icons/md";
-import { BiEdit } from "react-icons/bi";
-import { AiFillEye } from "react-icons/ai";
-// import "./Style.css";
 
 const BannerList = () => {
   const [data, setData] = useState();
@@ -44,19 +42,10 @@ const BannerList = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
-          <AiFillEye
-            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
-          />
-          <MdDelete
-            style={{
-              width: "20px",
-              height: "20px",
-              color: "red",
-              marginLeft: "10px",
-            }}
-          />
+        <div className="d-flex">
+          <EditButton />
+          <ViewButton />
+          <DeleteButton />
         </div>
       ),
       sortable: true,

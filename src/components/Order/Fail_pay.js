@@ -3,6 +3,7 @@ import Table from "../Common/Table/Table";
 // import { FaUserEdit } from "react-icons/fa";
 // import { BsPlusLg } from "react-icons/bs";
 import { AiFillEye } from "react-icons/ai";
+import { RiArrowUpDownLine } from "react-icons/ri";
 // import { MdDelete } from "react-icons/md";
 // import { CgDanger } from "react-icons/cg";
 // import { BsCheckLg } from "react-icons/bs";
@@ -51,10 +52,10 @@ const Fail_pay = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <input type="number" style={{ width: "70px" }} />
-          <div style={{ color: "blue", marginLeft: "10px" }}>Update</div>
-        </div>
+        <div style={{display:"flex"}}>
+        <input type="number" style={{ width: "70px" , border:"1px solid lightblue" }} />
+        <div style={{ color: "blue", marginLeft: "10px" }}><RiArrowUpDownLine/></div>
+      </div>
       ),
       sortable: true,
     },

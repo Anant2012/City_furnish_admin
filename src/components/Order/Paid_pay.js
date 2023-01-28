@@ -2,6 +2,8 @@ import { React, useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
 import { AiFillEye } from "react-icons/ai";
 import { BsCheck } from "react-icons/bs";
+import { RiArrowUpDownLine } from "react-icons/ri";
+
 
 const Paid_pay = () => {
   const [data, setData] = useState();
@@ -42,9 +44,9 @@ const Paid_pay = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <input type="number" style={{ width: "70px" }} />
-          <div style={{ color: "blue", marginLeft: "10px" }}>Update</div>
+        <div style={{display:"flex"}}>
+          <input type="number" style={{ width: "70px" , border:"1px solid lightblue" }} />
+          <div style={{ color: "blue", marginLeft: "10px" }}><RiArrowUpDownLine/></div>
         </div>
       ),
       sortable: true,
@@ -62,8 +64,8 @@ const Paid_pay = () => {
     {
       name: "Status",
       selector: (row) => (
-        <div>
-          <BsCheck style={{ width: "20px", height: "24px", color: "brown" }} />
+        <div style={{display:"flex"}}>
+          <BsCheck style={{ width: "20px", height: "24px", color: "brown" ,marginRight:"2px" }} />
           <AiFillEye
             style={{ width: "20px", height: "24px", color: "brown" }}
           />

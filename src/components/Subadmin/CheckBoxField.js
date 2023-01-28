@@ -1,10 +1,10 @@
 const CheckBoxField = ({ isChecked = [], label, onChange, idx }) => {
   return (
-    <div className="pass checkboxes-container">
-      <div style={{ marginBottom: "1%" }}>
+    <div className="pl-4 pt-2 mb-3 mt-4 checkboxes-container ">
+      <div style={{ marginBottom: "1%" }} className="font-semibold tracking-wide text-lg font-lora">
         {label} <span className="spans">*</span>
       </div>
-      <div className="input checkboxes">
+      <div className="input checkboxes ml-[12%]">
         <div>
           <input
             type="checkbox"

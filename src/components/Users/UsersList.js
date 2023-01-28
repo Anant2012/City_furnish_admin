@@ -1,72 +1,59 @@
 import { useEffect, useState } from "react";
 import Table from "../Common/Table/Table";
-import { MdDelete } from "react-icons/md";
-import { BiEdit } from "react-icons/bi";
-import { AiFillEye } from "react-icons/ai";
+import EditButton from "../Common/ActionsButtons/EditButton";
+import { AxiosInstance } from "../../AxiosInstance";
+import ViewButton from "../Common/ActionsButtons/ViewButton";
+import DeleteButton from "../Common/ActionsButtons/DeleteButton";
 
 const UsersList = () => {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(data);
-  const handleOpen = () => {
-    // to do
-  };
+
   const onSearch = (val) => {
-    console.log("called onsearch fun", val);
     setFilteredData(
       data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
-    { name: "Full Name", selector: (row) => row.name, sortable: true },
-    { name: "User Name ", selector: (row) => row.name, sortable: true },
-    { name: "User ID", selector: (row) => row.capital, sortable: true },
+    { name: "Full Name", selector: (row) => row.full_name, sortable: true },
+    { name: "User Name ", selector: (row) => row.user_name, sortable: true },
+    { name: "User ID", selector: (row) => row.id, sortable: true },
     {
       name: "Email",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Last Logout Date",
-      selector: (row) => row.population,
-      sortable: true,
-    },
-    {
-      name: "Last Login IP",
-      selector: (row) => row.population,
+      selector: (row) => row.email,
       sortable: true,
     },
     {
       name: "Status",
-      selector: (row) => <button className="btn btn-success">Active</button>,
+      selector: (row) =>
+        row.status === "Active" ? (
+          <button className="btn btn-success">Active</button>
+        ) : (
+          <button className="btn">Inactive</button>
+        ),
       sortable: true,
     },
     {
-      name: "Status",
+      name: "Is Offline",
+      selector: (row) => row.is_offline_user,
+      sortable: true,
+    },
+    {
+      name: "Action",
       selector: (row) => (
-        <div>
-          <BiEdit style={{ width: "20px", height: "20px", color: "#7b5050" }} />
-          <AiFillEye
-            style={{ width: "20px", height: "20px", marginLeft: "10px" }}
-          />
-          <MdDelete
-            style={{
-              width: "20px",
-              height: "20px",
-              color: "red",
-              marginLeft: "10px",
-            }}
-          />
+        <div className="d-flex">
+          <EditButton />
+          <ViewButton />
+          <DeleteButton />
         </div>
       ),
-      sortable: true,
     },
   ];
 
-  const getData = async () => {
-    fetch("https://restcountries.com/v2/all")
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => console.log("errorr", err));
+  const getData = () => {
+    AxiosInstance.get("/api/user")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {

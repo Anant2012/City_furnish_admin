@@ -104,21 +104,23 @@ const Default = () => {
       <div
         style={{
           fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
+          border:"1px solid lightgrey",
           padding: "0px 10px",
         }}
+        className = "border-1 rounded-sm"
       >
-        <div style={{ marginTop: "10px" }}>
+        <div style={{ marginTop: "10px" }} className="bg-baby_blue font-lora text-2xl py-3 px-2 text-white font-semibold tracking-wider">
           ☰ <span style={{ marginLeft: "10px" }}>Defaulter</span>
         </div>
         <div>
           <input
             type="text"
             placeholder="Search order/customer email/phone no."
-            style={{ width: "30%", padding: "5px", outline: "none" }}
+            className=" w-1/4 bg-slate-50 rounded-sm py-2 px-3 shadow-sm"
           />
-          <button style={{ padding: "5px", marginLeft: "10px" }}>Search</button>
+          <button style={{ padding: "5px", marginLeft: "10px" }}
+          className="w-1/8 ml-[20%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700"
+          >Search</button>
         </div>
         <div className="mt-3">
           <Table

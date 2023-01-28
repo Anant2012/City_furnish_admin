@@ -30,45 +30,34 @@ const AddNewSubadmin = () => {
 
   return (
     <div
-      style={{ margin: "3%", borderRadius: "7px", border: "1px solid gray" }}
+      className="bg-white mx-auto w-[70%] mt-12"
     >
       <div
-        style={{
-          fontWeight: "bold",
-          backgroundColor: "lightgray",
-          border: "1px solid lightgray",
-          padding: "10px",
-        }}
+        className="bg-baby_blue font-lora text-2xl py-3 px-2 text-white font-semibold tracking-wider"
       >
         ☰ <span style={{ marginLeft: "10px" }}>ADD SUBADMIN</span>
       </div>
-      <div className="pass">
+      <div className="pl-4 pt-2 mb-3 mt-4 font-semibold tracking-wide text-lg font-lora flex  space-x-[12%]" >
         <div style={{ marginBottom: "1%" }}>
           EMAIL ADDRESS <span className="spans">*</span>
         </div>
-        <div>
           <input type="email" required className="input"></input>
-        </div>
       </div>
-      <div className="pass">
+      <div className="pl-4 pt-2 mb-3 mt-4 font-semibold tracking-wide text-lg font-lora space-x-[12%] flex">
         <div style={{ marginBottom: "1%" }}>
           SUB ADMIN NAME <span className="spans">*</span>
         </div>
-        <div>
           <input type="text" required className="input"></input>
-        </div>
       </div>
-      <div className="pass">
+      <div className="pl-4 pt-2 mb-3 mt-4 font-semibold tracking-wide text-lg font-lora flex space-x-[12%]">
         <div style={{ marginBottom: "1%" }}>
           PASSWORD <span className="spans">*</span>
         </div>
-        <div>
           <input type="password" required className="input" />
-        </div>
       </div>
 
-      <div className="pass">
-        <div className="input">
+      <div className="">
+        <div className="input ml-[12%]">
           <input
             type="checkbox"
             onChange={handleSelectAll}
@@ -79,21 +68,22 @@ const AddNewSubadmin = () => {
               marginLeft: "10px",
               fontSize: "12px",
             }}
+            className="font-semibold tracking-wide text-xl font-lora"
           >
             Select All
           </span>
         </div>
       </div>
 
-      <div className="pass checkboxes-container">
-        <div style={{ marginBottom: "1%" }}>
+      <div className="pl-4 pt-2 mb-3 mt-4 checkboxes-container">
+        <div style={{ marginBottom: "1%" }} className="font-semibold tracking-wide text-lg font-lora">
           MANGEMENT NAME <span className="spans">*</span>
         </div>
-        <div className="input checkboxes">
-          <div>View</div>
-          <div>Add</div>
-          <div>Edit</div>
-          <div>Delete</div>
+        <div className="input checkboxes ml-[12%]">
+          <div className="font-semibold tracking-wide text-md font-lora">View</div>
+          <div className="font-semibold tracking-wide text-md font-lora">Add</div>
+          <div className="font-semibold tracking-wide text-md font-lora">Edit</div>
+          <div className="font-semibold tracking-wide text-md font-lora">Delete</div>
         </div>
       </div>
       {AddNewSubadminDummyData.map((item, idx) => (
@@ -105,15 +95,9 @@ const AddNewSubadmin = () => {
         />
       ))}
       <div className="buton">
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "#1876ba",
-            border: "none",
-            padding: "6px",
-          }}
+      <button className=" w-[20%] ml-[23%] h-10 bg-baby_blue text-white rounded-lg  mt-10 mb-4 hover:scale-105 duration-300 hover:bg-sky-700" 
         >
-          SUBMIT
+          Submit
         </button>
       </div>
     </div>

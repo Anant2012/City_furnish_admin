@@ -4,33 +4,37 @@ import Seo from "./Seo";
 // import GoogleWebmaster from "./GoogleWebmaster";
 // import "./Style.css";
 function AddLocation() {
-    const [opened, setOpened] = useState(true);
-    const [opened1, setOpened1] = useState(false);
+    const [content, setContent] = useState(true);
+    // const [opened1, setOpened1] = useState(false);
     const Now = () => {
-        setOpened(true);
-        setOpened1(false);
+setContent(true)
     };
     const Now1 = () => {
-        setOpened(false);
-        setOpened1(true);
+setContent(false)
     }
     return (
-        <div className="all">
-            <div
-                style={{
-                    fontWeight: "bold",
-                    backgroundColor: "lightgray",
-                    padding: "10px",
-                }}
-            >
-                ☰ <span style={{ marginLeft: "10px" }}>Add New Location</span>
-                <span className="main">
+        <div
+        className='w-[70%] shadow-sm'
+          style={{ margin: "3% auto",background: '#fff' }}
+        >
+          <div
+            // style={{
+            //   fontWeight: "bold",
+            //   backgroundColor: "lightgray",
+            //   border: "1px solid lightgray",
+            //   padding: "10px",
+            // }}
+            className="bg-baby_blue flex justify-content-between font-lora text-2xl py-3 px-2 text-white font-semibold tracking-wider"
+          >    <span>      ☰ <span style={{ marginLeft: "10px" }}>Add New Location</span></span>
+                <span className="">
                     <span
                         style={{
                             margin: "5px",
                             cursor: "pointer",
                             border: "1px solid white",
                             padding: "5px",
+                            fontSize:'14px',
+                            borderRadius:'0.3rem'
                         }}
                         className="spanss"
                         onClick={Now}
@@ -44,6 +48,8 @@ function AddLocation() {
                             cursor: "pointer",
                             border: "1px solid white",
                             padding: "5px",
+                            fontSize:'14px',
+                            borderRadius:'0.3rem'
                         }}
                         className="spanss"
                         onClick={Now1}
@@ -52,8 +58,7 @@ function AddLocation() {
                     </span>
                 </span>
             </div>
-            {opened && <Content />}
-            {opened1 && <Seo />}
+            {content ?  <Content />:<Seo />}
         </div>
     );
 }

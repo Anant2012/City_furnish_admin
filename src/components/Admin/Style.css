@@ -4,6 +4,7 @@ input:focus {
 .pass {
   display: flex;
   margin: 40px;
+  color : black
 }
 .form-sub-heading {
   margin: 2%;
@@ -76,18 +77,11 @@ input:focus {
 /* Setting Css */
 .main {
   font-weight: normal;
-  position: absolute;
-  right: 8%;
-}
-
-.spanss:hover {
-  color: blue;
 }
 
 .all {
   margin: 3%;
   border-radius: 7px;
-  border: 1px solid gray;
 }
 
 @media only screen and (max-width: 600px) {

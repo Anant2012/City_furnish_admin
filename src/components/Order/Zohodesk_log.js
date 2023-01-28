@@ -45,9 +45,9 @@ const Zohodesk_log = () => {
     {
       name: "Action",
       selector: (row) => (
-        <div>
-          <FaUserEdit style={{ color: "gray" }} />
-          <MdDelete style={{ color: "brown" }} />
+        <div style={{display:"flex"}}>
+          <FaUserEdit style={{ color: "gray" , marginRight:"2px",fontSize:"1.5em" }} />
+          <MdDelete style={{ color: "brown",fontSize:"1.5em" }} />
         </div>
       ),
       sortable: true,

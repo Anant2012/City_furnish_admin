@@ -4,78 +4,39 @@ import SocialMediaSetting from "./SocialMediaSetting";
 import GoogleWebmaster from "./GoogleWebmaster";
 import "./Style.css";
 function Settings() {
-    const [opened, setOpened] = useState(true);
-    const [opened1, setOpened1] = useState(false);
-    const [opened2, setOpened2] = useState(false);
-    const Now = () => {
-        setOpened(true);
-        setOpened1(false);
-        setOpened2(false);
-    };
-    const Now1 = () => {
-        setOpened(false);
-        setOpened1(true);
-        setOpened2(false);
-    }
-    const Now2 = () => {
-        setOpened(false);
-        setOpened1(false);
-        setOpened2(true);
+    const [opened, setOpened] = useState("");
+    const Selector = () =>{
+        if(opened === "Admin"){
+            return <AdminSetting />
+        }else if(opened === "Social"){
+            return <SocialMediaSetting />
+        }
+        return <GoogleWebmaster />
     }
     return (
-        <div className="all">
-            <div
-                style={{
-                    fontWeight: "bold",
-                    backgroundColor: "lightgray",
-                    padding: "10px",
-                }}
+        <div className="all w-[70%] mx-auto bg-white shadow-sm">
+            <div className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between"
             >
-                ☰ <span style={{ marginLeft: "10px" }}>GLOBAL SITE CONFIGURATION</span>
-                <span className="main">
-                    <span
-                        style={{
-                            margin: "5px",
-                            cursor: "pointer",
-                            border: "1px solid white",
-                            padding: "5px",
-                        }}
-                        className="spanss"
-                        onClick={Now}
-                    >
-                        {" "}
+                <div className="flex items-center space-x-2">
+                <span className="text-2xl">
+                    ☰</span> 
+                    <span style={{ marginLeft: "13px" }} className="text-3xl">GLOBAL SITE CONFIGURATION</span>
+                </div>
+                <div className="main text-md flex space-x-6 items-center">
+                    <span className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold" onClick={()=>setOpened("Admin")}>
                         Admin Settings
                     </span>
-                    <span
-                        style={{
-                            margin: "5px",
-                            cursor: "pointer",
-                            border: "1px solid white",
-                            padding: "5px",
-                        }}
-                        className="spanss"
-                        onClick={Now1}
-                    >
+                    <span className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold" onClick={()=>setOpened("Social")}>
                         Social Media Settings
                     </span>
-                    <span
-                        style={{
-                            margin: "5px",
-                            cursor: "pointer",
-                            border: "1px solid white",
-                            padding: "5px",
-                        }}
-                        className="spanss"
-                        onClick={Now2}
-                    >
-                        {" "}
+                    <span className="spanss cursor-pointer duration-300 hover:text-green-200 font-semibold" onClick={()=>setOpened("Google")}>
                         Google Webmaster
                     </span>
-                </span>
+                </div>
             </div>
-            {opened && <AdminSetting />}
-            {opened1 && <SocialMediaSetting />}
-            {opened2 && <GoogleWebmaster />}
+            {
+                Selector()
+            }
         </div>
     );
 }

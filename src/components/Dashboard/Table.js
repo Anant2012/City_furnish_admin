@@ -1,14 +1,16 @@
 import React from "react";
 import "./Table.css";
-import { GrLineChart } from "react-icons/gr";
-import { HiUsers } from "react-icons/hi";
-import { FiEdit2 } from "react-icons/fi";
-import { AiOutlineCheck } from "react-icons/ai";
-import { CiCircleRemove } from "react-icons/ci";
+import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import ModeEditRoundedIcon from '@mui/icons-material/ModeEditRounded';
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+
+
 function Table() {
   return (
-    <div>
+    <div className="font-lora">
       <div
         style={{
           maxWidth: "1200px",
@@ -19,26 +21,17 @@ function Table() {
         className="cards"
       >
         <div style={{ width: "100%" }}>
-          <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+          <div 
+            className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between"
           >
-            <GrLineChart />
-            <span style={{ margin: "0px 15px" }}>USERS</span>
+            <TrendingUpOutlinedIcon/>
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">USERS</span>
           </div>
-          <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+          <div className="font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between bg-sky-100 text-gray-800 text-xl"
           >
             Users Count 81289
           </div>
-          <table className="rwd-table">
+          <table className="rwd-table text-center font-lora text-xl">
             <tr>
               <td>Today</td>
               <td className="tab">0</td>
@@ -55,127 +48,101 @@ function Table() {
         </div>
         <div style={{ width: "100%" }}>
           <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+            className="flex justify-between bg-baby_blue text-white py-3 font-semibold text-xl items-center px-3"
           >
-            <HiUsers />
-            <span style={{ margin: "0px 15px" }}>Recent Users</span>
+            <PersonRoundedIcon />
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">Recent Users</span>
           </div>
           <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+            className="bg-sky-100"
           ></div>
           <div
-            style={{
-              border: "1px solid lightgray",
-              padding: "2% 2% 0 2%",
-              backgroundColor: "white",
-            }}
+            className="flex flex-col space-y-5 bg-white px-3 py-3 rounded-lg"
           >
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
-                  style={{ width: "120%" }}
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
           </div>
         </div>
+        
       </div>
       <div
         style={{
@@ -187,26 +154,17 @@ function Table() {
         className="cards"
       >
         <div style={{ width: "100%" }}>
-          <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+          <div 
+            className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between"
           >
-            <GrLineChart />
-            <span style={{ margin: "0px 15px" }}>USERS</span>
+            <TrendingUpOutlinedIcon/>
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">USERS</span>
           </div>
-          <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+          <div className="font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between bg-sky-100 text-gray-800 text-xl"
           >
             Users Count 81289
           </div>
-          <table className="rwd-table">
+          <table className="rwd-table text-center font-lora text-xl">
             <tr>
               <td>Today</td>
               <td className="tab">0</td>
@@ -223,127 +181,101 @@ function Table() {
         </div>
         <div style={{ width: "100%" }}>
           <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+            className="flex justify-between bg-baby_blue text-white py-3 font-semibold text-xl items-center px-3"
           >
-            <HiUsers />
-            <span style={{ margin: "0px 15px" }}>Recent Users</span>
+            <PersonRoundedIcon />
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">Recent Users</span>
           </div>
           <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+            className="bg-sky-100"
           ></div>
           <div
-            style={{
-              border: "1px solid lightgray",
-              padding: "2% 2% 0 2%",
-              backgroundColor: "white",
-            }}
+            className="flex flex-col space-y-5 bg-white px-3 py-3 rounded-lg"
           >
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: amit kiri5143
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
                   IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
           </div>
         </div>
+        
       </div>
       <div
         style={{
@@ -355,170 +287,128 @@ function Table() {
         className="cards"
       >
         <div style={{ width: "100%" }}>
-          <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+          <div 
+            className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between"
           >
-            <AiOutlineShoppingCart />
-            <span style={{ margin: "0px 15px" }}>RECENT ORDERS</span>
+            <TrendingUpOutlinedIcon/>
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">USERS</span>
           </div>
-          <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+          <div className="font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden justify-between bg-sky-100 text-gray-800 text-xl"
           >
             Users Count 81289
           </div>
-          <table className="rwd-table">
+          <table className="rwd-table text-center font-lora text-xl">
             <tr>
               <td>Today</td>
-              <td className="tab">0</td>
-              <td className="tab">0</td>
               <td className="tab">0</td>
             </tr>
             <tr>
               <td>This Month</td>
               <td className="tab">6</td>
-              <td className="tab">0</td>
-              <td className="tab">0</td>
             </tr>
             <tr>
               <td>This Year</td>
               <td className="tab">5</td>
-              <td className="tab">0</td>
-              <td className="tab">0</td>
             </tr>
           </table>
         </div>
         <div style={{ width: "100%" }}>
           <div
-            style={{
-              padding: "10px 10px",
-              fontWeight: "bold",
-              backgroundColor: "#adb5bd",
-            }}
+            className="flex justify-between bg-baby_blue text-white py-3 font-semibold text-xl items-center px-3"
           >
-            <HiUsers />
-            <span style={{ margin: "0px 15px" }}>Recent SellerList</span>
+            <PersonRoundedIcon />
+            <span style={{ margin: "0px 15px" }} className="text-2xl font-lora">Recent SellerList</span>
           </div>
-          
           <div
-            style={{
-              fontWeight: "bold",
-              backgroundColor: "lightgray",
-              padding: "10px 10px",
-            }}
+            className="bg-sky-100"
           ></div>
           <div
-            style={{
-              border: "1px solid lightgray",
-              padding: "2% 2% 0 2%",
-              backgroundColor: "white",
-            }}
+            className="flex flex-col space-y-5 bg-white px-3 py-3 rounded-lg"
           >
             <div style={{ display: "flex" }}>
-              <div>
-                Name: shubhamkaushik
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
-                  IP: 115.249.229.217 Date: 2016-09-06 05:58:48
+                  IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: samikshakhanna
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
-                  IP: 182.64.104.11 Date: 2016-08-29 06:41:59
+                  IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
             <div style={{ display: "flex" }}>
-              <div>
-                Name: Anna
+              <div className="">
+                <span className="text-xl font-semibold">Name</span> <span className="font-medium ml-7">amit kiri5143</span>
                 <p className="ip">
-                  IP: 115.188.135.154 Date: 2016-08-16 06:53:43
+                  IP: 172.31.15.128 Date: 2023-01-02 19:53:48
                 </p>
-                <FiEdit2
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
-                <CiCircleRemove
-                  style={{
-                    width: "25%",
-                    height: "15%",
-                    border: "1px solid lightgray",
-                    padding: "2px",
-                  }}
-                />
+
+                <div className="flex space-x-3 mt-1 mb-2">
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <ModeEditRoundedIcon/>
+                  </span>
+                  <span className="bg-baby_blue text-white hover:scale-110 duration-300 cursor-pointer p-1 rounded-full flex items-center justify-center w-8 h-8">
+                    <CancelRoundedIcon/>
+                  </span>
+                </div>
+
               </div>
-              <div style={{ marginLeft: "30%", textAlign: "center" }}>
-                <img
-                  src="https://rentofurniture.com/images/user-thumb1.png"
-                  style={{ width: "120%" }}
+              <div style={{ marginLeft: "30%", textAlign: "center" }} className="flex space-x-3 items-center">
+                <span className="bg-green-100 text-green-500 px-2 rounded-md">
+                  <CheckRoundedIcon />
+                </span>
+                <img src="https://rentofurniture.com/images/user-thumb1.png"
                   alt="Loading.."
+                  className="h-8 w-8"
                 />
-                <AiOutlineCheck />
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

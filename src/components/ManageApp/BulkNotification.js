@@ -58,32 +58,19 @@ const BulkNotification = () => {
     <div className="container-fluid mt-4">
       <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0">
-          <div
-            style={{
-              margin: "1%",
-              borderRadius: "7px",
-              border: "1px solid gray",
-            }}
-          >
-            <div
-              style={{
-                fontWeight: "bold",
-                backgroundColor: "lightgray",
-                border: "1px solid lightgray",
-                padding: "10px",
-              }}
-            >
-              ☰{" "}
-              <span style={{ marginLeft: "10px" }}>
-                APP NOTIFICATION DASHBOARD
-              </span>
+          <div className="bg-white rounded-md overflow-hidden">
+            <div className="bg-baby_blue text-white font-lora  py-3 px-3 tracking-wider font-semibold  flex items-center overflow-hidden ">
+              ☰ <span className="ml-4">APP NOTIFICATION DASHBOARD</span>
             </div>
-            <div style={{ margin: "20px 35px 0 35px" }}>
+            <div
+              style={{ margin: "20px 35px 0 35px" }}
+              className="font-lora text-xl font-semibold"
+            >
               Send Bulk Notification
             </div>
             <div className="inner-container">
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Users Filter Option<span className="required">*</span>
                 </div>
                 <select name="users_filter" id="users_filter">
@@ -94,7 +81,7 @@ const BulkNotification = () => {
                 </select>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   From Date<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -102,7 +89,7 @@ const BulkNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   To Date<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -110,18 +97,22 @@ const BulkNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Screen To Redirect<span className="required">*</span>
                 </div>
                 <div className="field-input">
                   <select name="screen_redirect" id="screen_redirect">
-                    <option value="select_screen">Select Screen</option>
-                    <option value="home_screen">Home Screen</option>
+                    <option value="select_screen font-lora text-md font-semibold">
+                      Select Screen
+                    </option>
+                    <option value="home_screen font-lora text-md font-semibold">
+                      Home Screen
+                    </option>
                   </select>
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Notification Title<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -129,7 +120,7 @@ const BulkNotification = () => {
                 </div>
               </div>
               <div className="field">
-                <div className="label">
+                <div className="label font-lora text-md font-semibold">
                   Meassge Body<span className="required">*</span>
                 </div>
                 <div className="field-input">
@@ -138,15 +129,7 @@ const BulkNotification = () => {
               </div>
             </div>
             <div>
-              <button
-                style={{
-                  color: "white",
-                  backgroundColor: "#1876ba",
-                  border: "none",
-                  padding: "6px",
-                  margin: "5px 35px 10px 35px",
-                }}
-              >
+              <button className="w-[20%] ml-[32%] h-10 bg-baby_blue text-white rounded-lg  mt-6 mb-4 hover:scale-105 duration-300 hover:bg-sky-700 ">
                 SEND NOTIFICATION
               </button>
             </div>
