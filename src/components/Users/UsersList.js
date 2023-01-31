@@ -11,7 +11,7 @@ const UsersList = () => {
 
   const onSearch = (val) => {
     setFilteredData(
-      data.filter((x) => x.name.toLowerCase().match(val.toLowerCase()))
+      data.filter((x) => x.full_name.toLowerCase().match(val.toLowerCase()))
     );
   };
   const columns = [
